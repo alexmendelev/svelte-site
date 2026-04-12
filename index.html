@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Svelte Design Studio rebuilt as a folder-based multi-page site with separate pages for each main content area."
+    />
+    <title>Svelte Design Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Svelte Design Studio home">
+          <img src="assets/logo.png" alt="Svelte Design Studio logo" />
+          <span>Svelte Design Studio</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav">
+          <a href="index.html" data-nav-page="home">Home</a>
+          <a href="graphic-design-and-digital-marketing.html" data-nav-page="graphic-design-and-digital-marketing">Graphic Design</a>
+          <a href="master-classes.html" data-nav-page="master-classes">Master Classes</a>
+          <a href="original-art.html" data-nav-page="original-art">Original Art</a>
+          <a href="my-journey.html" data-nav-page="my-journey">My Journey</a>
+          <a href="contact-me.html" data-nav-page="contact-me">Contact Me</a>
+        </nav>
+      </header>
+
+      <main class="page">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Art, design, and workshops created with calm hands and an open heart.</p>
+            <h1>Svelte Design Studio</h1>
+            <p class="lead">
+              Explore mindful workshops, original art, and visual design created
+              to feel warm, clear, and quietly memorable.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Creative paths</p>
+            <h2>Choose where you'd like to wander</h2>
+            <p>
+              Each page opens a different corner of the studio, from calming
+              workshops to brand visuals and original art.
+            </p>
+          </div>
+
+          <div class="cards-grid" id="home-grid"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; Svelte Design Studio. Art, design, and quiet joy.</p>
+      </footer>
+    </div>
+
+    <script src="site-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

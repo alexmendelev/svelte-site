@@ -9,6 +9,16 @@ const header = document.querySelector(".site-header");
 
 const videoExtensions = new Set(["mp4", "webm", "ogg", "mov"]);
 
+const isMobileViewport = () => window.matchMedia("(max-width: 768px)").matches;
+
+const getMobileSrc = (src) => {
+  if (!src.startsWith("assets/")) {
+    return src;
+  }
+
+  return src.replace(/^assets\//, "assets/mobile/");
+};
+
 const hideIfEmpty = (element, shouldHide) => {
   if (!element) {
     return;
@@ -16,6 +26,7 @@ const hideIfEmpty = (element, shouldHide) => {
 
   element.hidden = shouldHide;
 };
+
 
 const formatFileName = (value) => {
   const base = value.split("/").pop().replace(/\.[^.]+$/, "");
@@ -69,9 +80,26 @@ const createMediaElement = (src, altText) => {
   }
 
   const image = document.createElement("img");
+  image.decoding = "async";
   image.loading = "lazy";
-  image.src = encodeURI(src);
   image.alt = altText;
+
+  const mobileSrc = getMobileSrc(src);
+  const shouldUseMobile = isMobileViewport() && mobileSrc !== src;
+  image.src = encodeURI(shouldUseMobile ? mobileSrc : src);
+
+  if (shouldUseMobile) {
+    image.addEventListener(
+      "error",
+      () => {
+        if (image.src !== encodeURI(src)) {
+          image.src = encodeURI(src);
+        }
+      },
+      { once: true }
+    );
+  }
+
   return image;
 };
 
@@ -115,10 +143,7 @@ const renderHeroArtwork = (page) => {
     const card = document.createElement("div");
     card.className = `art-showcase-card art-showcase-card--${index + 1}`;
 
-    const image = document.createElement("img");
-    image.src = encodeURI(item.src);
-    image.alt = item.alt;
-    image.loading = "lazy";
+    const image = createMediaElement(item.src, item.alt);
 
     card.append(image);
     fragment.append(card);

@@ -278,8 +278,8 @@ button {
   right: 32px;
   top: 50%;
   transform: translateY(-50%);
-  width: 190px;
-  height: 220px;
+  width: 160px;
+  height: 190px;
   padding: 8px;
   box-sizing: border-box;
   background: rgba(230, 239, 247, 0.88);

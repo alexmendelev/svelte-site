@@ -306,21 +306,6 @@ body[data-page="home"] .hero-copy {
   max-width: 520px;
 }
 
-.hero-portrait.hero-portrait--original {
-  width: 100%;
-}
-
-.hero-portrait.hero-portrait--original img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 28px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-}
-
 body[data-page="contact-me"] .hero {
   grid-template-columns: 1fr;
   align-items: start;

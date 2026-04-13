@@ -84,9 +84,19 @@ This document describes the architecture and implementation decisions made while
 - Add progressive image placeholders or blur-up previews for an even smoother mobile experience.
 - Consolidate site shell and page templates if moving to a full SvelteKit implementation.
 
-## 10. Why These Decisions
+## 11. Recent Updates (April 2026)
 
-- The site is designed to be easy to maintain: add image files, update metadata, and the JS does the rest.
-- Mobile users get improved performance through targeted low-res assets.
-- The structure separates content, presentation, and runtime behavior clearly.
-- Static HTML with a data-driven JS layer keeps the site fast and easy to host.
+- **Homepage Portrait Addition**: Added a portrait photo (`Sveta_Portrait_20191124.jpg`) to the homepage hero section in a delicate light blue frame. The photo is positioned absolutely on the right side, centered vertically within the hero section, and sized at 190px × 220px with padding and rounded corners for a polished look. The frame uses a light blue background (`rgba(230, 239, 247, 0.88)`) and subtle border to complement the site's color palette. This enhances the personal touch on the landing page without disrupting the layout.
+
+- **Contact Page Enhancements**: 
+  - Added the same portrait photo to the "My Info" card on the Contact Me page, positioned above the contact details in a smaller frame (140px × 180px) with matching styling.
+  - Transformed the client details section into a functional contact form with fields for Name, Email, Phone Number, and Project/Request.
+  - Implemented WhatsApp integration: the form submits by opening `https://wa.me/972547343857` with a pre-filled message containing the user's input. This allows direct communication via WhatsApp for inquiries.
+  - Updated contact details to include real information (email: msveta13@gmail.com, phone: +972 547 343 857, social links).
+
+- **Styling and Positioning Adjustments**: 
+  - Ensured the homepage photo aligns with the text indentation by adjusting the right positioning.
+  - Added responsive behavior to hide the photo on smaller screens (mobile) to maintain clean layout.
+  - Used CSS classes like `.hero-photo` and `.contact-card-portrait` for consistent framing across pages.
+
+These changes improve user engagement by adding a personal element and streamlining contact methods, while maintaining the site's clean, data-driven architecture.

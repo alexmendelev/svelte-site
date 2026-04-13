@@ -37,46 +37,52 @@
           </div>
           <div class="contact-card-grid">
             <aside class="contact-card" aria-label="Your contact details">
+              <div class="contact-card-portrait">
+                <img src="assets/Sveta_Portrait_20191124.jpg" alt="Portrait of Sveta" />
+              </div>
               <h2>My Info</h2>
               <div class="contact-detail-grid">
                 <div class="contact-detail">
                   <span class="contact-label">Email</span>
-                  <span class="contact-value">your@email.com</span>
+                  <span class="contact-value">msveta13@gmail.com</span>
                 </div>
                 <div class="contact-detail">
                   <span class="contact-label">Phone Number</span>
-                  <span class="contact-value">+972 XX XXX XXXX</span>
+                  <span class="contact-value">+972 547 343 857</span>
                 </div>
                 <div class="contact-detail">
                   <span class="contact-label">Socials</span>
                   <div class="contact-socials">
-                    <span class="contact-social-link">Instagram: instagram.com/yourname</span>
-                    <span class="contact-social-link">Facebook or another link: your-link.com</span>
+                    <span class="contact-social-link">Instagram: instagram.com/msveta_13</span>
+                    <span class="contact-social-link">Facebook: facebook.com/svetlana.mendelev</span>
                   </div>
                 </div>
               </div>
             </aside>
-            <aside class="contact-card" aria-label="Client details">
-              <h2>Leave Your Details</h2>
-              <p>Here you can leave your details, and I'll be glad to get back to you.</p>
-              <div class="contact-detail-grid">
-                <div class="contact-detail">
-                  <span class="contact-label">Name</span>
-                  <span class="contact-value">&nbsp;</span>
+            <aside class="contact-card" aria-label="Client details form">
+              <h2>Send Your Request</h2>
+              <p>Enter your contact details and project request below. The message will open in WhatsApp so I can reply directly.</p>
+              <form id="contact-form">
+                <div class="contact-detail-grid">
+                  <div class="contact-detail">
+                    <label class="contact-label" for="contact-name">Name</label>
+                    <input class="contact-input" id="contact-name" name="name" type="text" placeholder="Your name" />
+                  </div>
+                  <div class="contact-detail">
+                    <label class="contact-label" for="contact-email">Email</label>
+                    <input class="contact-input" id="contact-email" name="email" type="email" placeholder="Your email" />
+                  </div>
+                  <div class="contact-detail">
+                    <label class="contact-label" for="contact-phone">Phone Number</label>
+                    <input class="contact-input" id="contact-phone" name="phone" type="tel" placeholder="Your phone number" />
+                  </div>
+                  <div class="contact-detail">
+                    <label class="contact-label" for="contact-project">Project / Request</label>
+                    <textarea class="contact-textarea" id="contact-project" name="project" rows="5" placeholder="Briefly describe your request"></textarea>
+                  </div>
                 </div>
-                <div class="contact-detail">
-                  <span class="contact-label">Email</span>
-                  <span class="contact-value">&nbsp;</span>
-                </div>
-                <div class="contact-detail">
-                  <span class="contact-label">Phone Number</span>
-                  <span class="contact-value">&nbsp;</span>
-                </div>
-                <div class="contact-detail">
-                  <span class="contact-label">Project / Request</span>
-                  <span class="contact-value">&nbsp;</span>
-                </div>
-              </div>
+                <button class="hero-gallery-link contact-submit" type="submit">Send to WhatsApp</button>
+              </form>
             </aside>
           </div>
         </section>

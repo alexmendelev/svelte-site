@@ -179,6 +179,40 @@ const setupMobileMenu = () => {
   });
 };
 
+const setupContactForm = () => {
+  const form = document.querySelector("#contact-form");
+  if (!form) {
+    return;
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const name = (formData.get("name") || "").toString().trim();
+    const email = (formData.get("email") || "").toString().trim();
+    const phone = (formData.get("phone") || "").toString().trim();
+    const project = (formData.get("project") || "").toString().trim();
+
+    if (!name && !email && !phone && !project) {
+      alert("Please enter at least one piece of information before sending.");
+      return;
+    }
+
+    const lines = [
+      name ? `Name: ${name}` : null,
+      email ? `Email: ${email}` : null,
+      phone ? `Phone: ${phone}` : null,
+      project ? `Project / Request: ${project}` : null
+    ].filter(Boolean);
+
+    const text = encodeURIComponent(lines.join("\n"));
+    const whatsappUrl = `https://wa.me/972547343857?text=${text}`;
+
+    window.open(whatsappUrl, "_blank");
+  });
+};
+
 const renderHome = () => {
   const homeGrid = document.querySelector("#home-grid");
   if (!homeGrid) {
@@ -352,6 +386,7 @@ const renderDetailPage = async () => {
 
 buildSiteNav();
 setupMobileMenu();
+setupContactForm();
 
 if (pageKey === "home") {
   renderHome();

@@ -100,3 +100,39 @@ This document describes the architecture and implementation decisions made while
   - Used CSS classes like `.hero-photo` and `.contact-card-portrait` for consistent framing across pages.
 
 These changes improve user engagement by adding a personal element and streamlining contact methods, while maintaining the site's clean, data-driven architecture.
+
+
+## 12. Recent Updates (April 2026, Multilingual and UX)
+
+- **Bilingual Site Structure**:
+  - Added `translations.js` as the shared translation source for static UI copy and page-level localized content.
+  - English remains the default language and Russian is available in parallel across the full site.
+  - The Russian copy is stored as plain readable UTF-8 text so it can be reviewed and edited comfortably in tools such as Notepad++.
+
+- **Language Switching Behavior**:
+  - `script.js` now supports `ENG` and `RUS` as active languages in the shared header language selector on every page.
+  - The current language is preserved both in `localStorage` and in page URLs using `?lang=ru`.
+  - Internal page links are rewritten dynamically so navigation, brand links, and generated homepage cards keep the selected language while moving through the site.
+  - `HEB` remains a visible placeholder only and is still marked as unavailable.
+
+- **Russian Copy Strategy**:
+  - Russian content was rewritten as native-style editorial copy rather than literal translation.
+  - Awkward direct phrasing was replaced with more natural Russian across navigation, homepage copy, page intros, gallery notes, Contact Me, and My Journey.
+  - The Russian Contact Me intro can intentionally be empty, and the matching paragraph is hidden automatically instead of leaving blank space.
+
+- **Shared Header and Navigation Refinements**:
+  - Added language buttons to all page headers as part of the shared site shell.
+  - Header spacing and sizing were adjusted to support larger navigation text without collisions.
+  - Russian-specific header sizing rules were added in `styles.css` so longer menu labels and language buttons fit cleanly beside the brand name.
+  - The brand label and navigation typography were tuned so the header remains balanced at larger browser text sizes.
+
+- **Gallery Viewer Improvements**:
+  - Added a full-screen lightbox for gallery media.
+  - The lightbox applies only to `jpg`, `jpeg`, `png`, and `mp4` files.
+  - Gallery thumbnails remain visible in the normal grid; clicking supported items opens a full-screen preview fitted to the current screen size.
+  - The preview closes using the on-screen `x` button, clicking outside the media, or pressing `Esc`.
+
+- **Gallery Layout Decisions**:
+  - Gallery rendering continues to group files into `landscape` and `standard` sets.
+  - Landscape items are displayed in 3 columns, while non-landscape items are displayed in 5 columns on desktop-oriented layouts.
+  - This layout logic is driven by the metadata layer and rendered dynamically in `script.js`.

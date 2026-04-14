@@ -33,35 +33,35 @@
             <p class="eyebrow" id="page-kicker"></p>
             <h1 id="page-title"></h1>
             <p class="lead" id="page-summary"></p>
-            <p>If you'd like to get in touch, you'll find my contact details here, along with a simple place where you can leave your own.</p>
+            <p id="contact-intro">If you'd like to get in touch, you'll find my contact details here, along with a simple place where you can leave your own.</p>
           </div>
           <div class="contact-card-grid">
-            <aside class="contact-card" aria-label="Your contact details">
+            <aside class="contact-card" id="contact-info-card" aria-label="Your contact details">
               <div class="contact-card-portrait">
-                <img src="assets/Sveta_Portrait_20191124.jpg" alt="Portrait of Sveta" />
+                <img id="contact-portrait" src="assets/Sveta_Portrait_20191124.jpg" alt="Portrait of Sveta" />
               </div>
-              <h2>My Info</h2>
+              <h2 id="contact-info-title">My Info</h2>
               <div class="contact-detail-grid">
                 <div class="contact-detail">
-                  <span class="contact-label">Email</span>
-                  <span class="contact-value"><a href="mailto:msveta13@gmail.com?subject=Contact%20Request&body=Hello%2C%20I%20am%20interested%20in%20more%20details%20about%20your%20services." target="_blank" rel="noopener">msveta13@gmail.com</a></span>
+                  <span class="contact-label" id="contact-email-label">Email</span>
+                  <span class="contact-value"><a id="contact-email-link" href="mailto:msveta13@gmail.com?subject=Contact%20Request&body=Hello%2C%20I%20am%20interested%20in%20more%20details%20about%20your%20services." target="_blank" rel="noopener">msveta13@gmail.com</a></span>
                 </div>
                 <div class="contact-detail">
-                  <span class="contact-label">Phone Number</span>
-                  <span class="contact-value"><a href="https://api.whatsapp.com/send?phone=972547343857&text=Hello%2C%20I%20am%20interested%20in%20more%20details%20about%20your%20services." target="_blank" rel="noopener">+972 547 343 857</a></span>
+                  <span class="contact-label" id="contact-phone-label">Phone Number</span>
+                  <span class="contact-value"><a id="contact-phone-link" href="https://api.whatsapp.com/send?phone=972547343857&text=Hello%2C%20I%20am%20interested%20in%20more%20details%20about%20your%20services." target="_blank" rel="noopener">+972 547 343 857</a></span>
                 </div>
                 <div class="contact-detail">
-                  <span class="contact-label">Socials</span>
+                  <span class="contact-label" id="contact-socials-label">Socials</span>
                   <div class="contact-socials">
-                    <span class="contact-social-link">Instagram: <a href="https://instagram.com/msveta_13" target="_blank" rel="noopener">instagram.com/msveta_13</a></span>
-                    <span class="contact-social-link">Facebook: <a href="https://facebook.com/svetlana.mendelev" target="_blank" rel="noopener">facebook.com/svetlana.mendelev</a></span>
+                    <span class="contact-social-link"><span id="contact-instagram-prefix">Instagram:</span> <a href="https://instagram.com/msveta_13" target="_blank" rel="noopener">instagram.com/msveta_13</a></span>
+                    <span class="contact-social-link"><span id="contact-facebook-prefix">Facebook:</span> <a href="https://facebook.com/svetlana.mendelev" target="_blank" rel="noopener">facebook.com/svetlana.mendelev</a></span>
                   </div>
                 </div>
               </div>
             </aside>
-            <aside class="contact-card" aria-label="Client details form">
-              <h2>Send Your Request</h2>
-              <p>Enter your contact details and project request below. The message will open in WhatsApp so I can reply directly.</p>
+            <aside class="contact-card" id="contact-request-card" aria-label="Client details form">
+              <h2 id="contact-request-title">Send Your Request</h2>
+              <p id="contact-request-intro">Enter your contact details and project request below. The message will open in WhatsApp so I can reply directly.</p>
               <form id="contact-form">
                 <div class="contact-detail-grid">
                   <div class="contact-detail">
@@ -81,7 +81,7 @@
                     <textarea class="contact-textarea" id="contact-project" name="project" rows="5" placeholder="Briefly describe your request"></textarea>
                   </div>
                 </div>
-                <button class="hero-gallery-link contact-submit" type="submit">Send to WhatsApp</button>
+                <button class="hero-gallery-link contact-submit" id="contact-submit" type="submit">Send to WhatsApp</button>
               </form>
             </aside>
           </div>
@@ -89,11 +89,12 @@
       </main>
 
       <footer class="site-footer">
-        <p>&copy; Svelte Design Studio. Art, design, and quiet joy.</p>
+        <p id="site-footer-text">&copy; Svelte Design Studio. Art, design, and quiet joy.</p>
       </footer>
     </div>
 
     <script src="site-data.js"></script>
+    <script src="translations.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

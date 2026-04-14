@@ -8,6 +8,9 @@ const menuToggle = document.querySelector(".menu-toggle");
 const header = document.querySelector(".site-header");
 
 const videoExtensions = new Set(["mp4", "webm", "ogg", "mov"]);
+const lightboxExtensions = new Set(["jpg", "jpeg", "png", "mp4"]);
+
+let galleryLightbox = null;
 
 const isMobileViewport = () => window.matchMedia("(max-width: 768px)").matches;
 
@@ -27,6 +30,124 @@ const hideIfEmpty = (element, shouldHide) => {
   element.hidden = shouldHide;
 };
 
+const ensureGalleryLightbox = () => {
+  if (galleryLightbox) {
+    return galleryLightbox;
+  }
+
+  let restoreFocusTo = null;
+
+  const overlay = document.createElement("div");
+  overlay.className = "gallery-lightbox";
+  overlay.hidden = true;
+  overlay.setAttribute("aria-hidden", "true");
+
+  const dialog = document.createElement("div");
+  dialog.className = "gallery-lightbox__dialog";
+  dialog.setAttribute("role", "dialog");
+  dialog.setAttribute("aria-modal", "true");
+  dialog.setAttribute("aria-label", "Gallery preview");
+
+  const closeButton = document.createElement("button");
+  closeButton.type = "button";
+  closeButton.className = "gallery-lightbox__close";
+  closeButton.setAttribute("aria-label", "Close preview");
+  closeButton.textContent = "x";
+
+  const contentRoot = document.createElement("div");
+  contentRoot.className = "gallery-lightbox__content";
+
+  dialog.append(closeButton, contentRoot);
+  overlay.append(dialog);
+  body.append(overlay);
+
+  const closeLightbox = () => {
+    overlay.hidden = true;
+    overlay.setAttribute("aria-hidden", "true");
+    body.classList.remove("lightbox-open");
+    contentRoot.replaceChildren();
+
+    if (restoreFocusTo && typeof restoreFocusTo.focus === "function") {
+      restoreFocusTo.focus();
+    }
+
+    restoreFocusTo = null;
+  };
+
+  const openLightbox = (src, altText, extension, triggerElement) => {
+    contentRoot.replaceChildren();
+
+    let media;
+    if (extension === "mp4") {
+      media = document.createElement("video");
+      media.className = "gallery-lightbox__video";
+      media.src = encodeURI(src);
+      media.controls = true;
+      media.playsInline = true;
+      media.preload = "metadata";
+    } else {
+      media = document.createElement("img");
+      media.className = "gallery-lightbox__image";
+      media.src = encodeURI(src);
+      media.alt = altText;
+      media.decoding = "async";
+    }
+
+    contentRoot.append(media);
+    restoreFocusTo = triggerElement;
+    overlay.hidden = false;
+    overlay.setAttribute("aria-hidden", "false");
+    body.classList.add("lightbox-open");
+    closeButton.focus();
+  };
+
+  closeButton.addEventListener("click", closeLightbox);
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !overlay.hidden) {
+      closeLightbox();
+    }
+  });
+
+  galleryLightbox = {
+    openLightbox,
+    closeLightbox
+  };
+
+  return galleryLightbox;
+};
+
+const supportsLightbox = (src) => lightboxExtensions.has(getExtension(src));
+
+const attachLightboxTrigger = (element, src, altText) => {
+  if (!supportsLightbox(src)) {
+    return;
+  }
+
+  const { openLightbox } = ensureGalleryLightbox();
+  const extension = getExtension(src);
+
+  element.classList.add("media-frame--interactive");
+  element.setAttribute("role", "button");
+  element.setAttribute("tabindex", "0");
+  element.setAttribute("aria-label", "Open " + altText + " in full screen");
+
+  element.addEventListener("click", () => {
+    openLightbox(src, altText, extension, element);
+  });
+
+  element.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openLightbox(src, altText, extension, element);
+    }
+  });
+};
 
 const formatFileName = (value) => {
   const base = value.split("/").pop().replace(/\.[^.]+$/, "");
@@ -113,8 +234,10 @@ const createMediaCard = (basePath, file, sectionTitle) => {
   const filePath = getFilePath(file);
   const fileTitle = formatFileName(filePath);
   const src = `${basePath}/${filePath}`;
-  const media = createMediaElement(src, `${sectionTitle} - ${fileTitle}`);
+  const altText = `${sectionTitle} - ${fileTitle}`;
+  const media = createMediaElement(src, altText);
   frame.append(media);
+  attachLightboxTrigger(frame, src, altText);
 
   article.append(frame);
   return article;
@@ -157,6 +280,35 @@ const createEmptyState = (text) => {
   card.className = "empty-state";
   card.textContent = text;
   return card;
+};
+
+const ensureLanguageSelector = () => {
+  if (!header || header.querySelector(".language-selector")) {
+    return;
+  }
+
+  const nav = header.querySelector(".site-nav");
+  if (!nav) {
+    return;
+  }
+
+  const selector = document.createElement("div");
+  selector.className = "language-selector";
+
+  [
+    { code: "en", label: "ENG", active: true },
+    { code: "he", label: "HEB", active: false },
+    { code: "ru", label: "RUS", active: false }
+  ].forEach((item) => {
+    const link = document.createElement("a");
+    link.href = "#";
+    link.className = item.active ? "lang-link active" : "lang-link";
+    link.dataset.lang = item.code;
+    link.textContent = item.label;
+    selector.append(link);
+  });
+
+  header.append(selector);
 };
 
 const buildSiteNav = () => {
@@ -384,6 +536,7 @@ const renderDetailPage = async () => {
   sectionsRoot.append(sectionFragment);
 };
 
+ensureLanguageSelector();
 buildSiteNav();
 setupMobileMenu();
 setupContactForm();
@@ -393,3 +546,5 @@ if (pageKey === "home") {
 } else {
   void renderDetailPage();
 }
+
+

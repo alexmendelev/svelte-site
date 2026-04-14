@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --cream: #f7f1e2;
   --cream-strong: rgba(255, 251, 243, 0.94);
   --sky: #d7e6f2;
@@ -1006,14 +1006,14 @@ body[data-page="home"] .hero .eyebrow {
 /* Preview compact scale */
 .site-header {
   flex-wrap: nowrap;
-  gap: 14px;
+  gap: 12px;
   margin-bottom: 22px;
   padding: 10px 12px;
 }
 
 .brand {
   flex: 0 0 auto;
-  gap: 10px;
+  gap: 8px;
   min-width: 0;
 }
 
@@ -1024,7 +1024,7 @@ body[data-page="home"] .hero .eyebrow {
 
 .brand span {
   white-space: nowrap;
-  font-size: 0.92rem;
+  font-size: 1rem;
   line-height: 1.05;
 }
 

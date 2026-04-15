@@ -835,7 +835,19 @@ p {
   }
 
   .language-selector {
-    display: none;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 6px;
+    margin-left: 0;
+    padding-top: 10px;
+  }
+
+  .lang-link {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 0.8rem;
   }
 
   .site-header.is-open .site-nav {

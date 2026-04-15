@@ -106,24 +106,30 @@ These changes improve user engagement by adding a personal element and streamlin
 
 - **Bilingual Site Structure**:
   - Added `translations.js` as the shared translation source for static UI copy and page-level localized content.
-  - English remains the default language and Russian is available in parallel across the full site.
-  - The Russian copy is stored as plain readable UTF-8 text so it can be reviewed and edited comfortably in tools such as Notepad++.
+  - English remains the default language, with Russian and Hebrew available across the full site.
+  - The Russian and Hebrew copy is stored as plain readable UTF-8 text so it can be reviewed and edited comfortably in tools such as Notepad++.
 
 - **Language Switching Behavior**:
-  - `script.js` now supports `ENG` and `RUS` as active languages in the shared header language selector on every page.
-  - The current language is preserved both in `localStorage` and in page URLs using `?lang=ru`.
+  - `script.js` now supports `ENG`, `RUS`, and `HEB` as active languages in the shared header language selector on every page.
+  - The current language is preserved both in `localStorage` and in page URLs using `?lang=...` for any supported language.
   - Internal page links are rewritten dynamically so navigation, brand links, and generated homepage cards keep the selected language while moving through the site.
-  - `HEB` remains a visible placeholder only and is still marked as unavailable.
+  - `syncDocumentLanguage()` now applies the active supported language to the `<html lang>` attribute instead of special-casing only English and Russian.
 
 - **Russian Copy Strategy**:
   - Russian content was rewritten as native-style editorial copy rather than literal translation.
   - Awkward direct phrasing was replaced with more natural Russian across navigation, homepage copy, page intros, gallery notes, Contact Me, and My Journey.
   - The Russian Contact Me intro can intentionally be empty, and the matching paragraph is hidden automatically instead of leaving blank space.
 
+- **Hebrew Support Strategy**:
+  - Hebrew translations were added for shared UI copy, homepage text, page intros, gallery labels, Contact Me content, and My Journey content in `translations.js`.
+  - The Hebrew experience uses RTL layout via `body[data-lang="he"]` so the page direction, header spacing, and language-button sizing better match right-to-left reading.
+  - Hebrew-specific header refinements were added in `styles.css` to keep navigation labels and language controls compact enough for the existing header shell.
+
 - **Shared Header and Navigation Refinements**:
   - Added language buttons to all page headers as part of the shared site shell.
   - Header spacing and sizing were adjusted to support larger navigation text without collisions.
   - Russian-specific header sizing rules were added in `styles.css` so longer menu labels and language buttons fit cleanly beside the brand name.
+  - Matching Hebrew-specific header sizing rules were added so RTL navigation remains readable without breaking the shared layout.
   - The brand label and navigation typography were tuned so the header remains balanced at larger browser text sizes.
 
 - **Gallery Viewer Improvements**:
@@ -136,3 +142,11 @@ These changes improve user engagement by adding a personal element and streamlin
   - Gallery rendering continues to group files into `landscape` and `standard` sets.
   - Landscape items are displayed in 3 columns, while non-landscape items are displayed in 5 columns on desktop-oriented layouts.
   - This layout logic is driven by the metadata layer and rendered dynamically in `script.js`.
+
+## 13. Recent Updates (April 2026, Mobile Language Selector)
+
+- A mobile regression surfaced after adding the third language: at viewport widths under `760px`, the language selector was still being hidden by CSS even though the language-switching logic remained active.
+- The fix was implemented in `styles.css` only:
+  - `.language-selector` is now visible on mobile, spans the full header width, and wraps cleanly below the brand and menu button.
+  - `.lang-link` buttons use slightly smaller sizing on phones so `ENG`, `HEB`, and `RUS` remain tappable without crowding the header.
+- This preserves the existing mobile menu behavior while ensuring visitors can always switch languages on phones.

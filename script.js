@@ -202,7 +202,7 @@ const setAriaLabel = (selector, value) => {
 };
 
 const syncDocumentLanguage = () => {
-  document.documentElement.lang = currentLanguage === "ru" ? "ru" : "en";
+  document.documentElement.lang = supportedLanguages.has(currentLanguage) ? currentLanguage : defaultLanguage;
   body.dataset.lang = currentLanguage;
 };
 

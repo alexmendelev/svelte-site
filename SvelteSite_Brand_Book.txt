@@ -1,0 +1,211 @@
+SVELTESITE BRAND BOOK
+For flyers, Facebook posts, Instagram posts, and related design materials
+
+Brand name
+Svelte Design Studio
+
+Brand spirit
+Warm, calm, creative, human, and quietly memorable.
+The visual language should feel artistic and professional at the same time.
+Nothing should feel loud, aggressive, cold, or overly corporate.
+
+Core brand mood
+- Soft warmth
+- Creative clarity
+- Gentle confidence
+- Handcrafted elegance
+- Calm energy
+
+PRIMARY COLOR PALETTE
+
+1. Cream
+Hex: #F7F1E2
+Use for: main backgrounds, negative space, light flyer backgrounds, soft frames
+
+2. Sky
+Hex: #D7E6F2
+Use for: secondary backgrounds, highlight blocks, soft accents, post panels
+
+3. Lavender
+Hex: #8D8ABD
+Use for: elegant accent areas, dividers, subtle decorative elements, secondary buttons
+
+4. Pink
+Hex: #EFB6D8
+Use for: soft feminine accents, story highlights, decorative shapes, supporting emphasis
+
+5. Orange
+Hex: #F6631A
+Use for: call to action, important emphasis, key icons, promo accents
+
+6. Rust
+Hex: #BC4E27
+Use for: strong headings, outlines, emphasis text, structure elements
+
+7. Ink
+Hex: #7B391E
+Use for: primary text, major headings, body copy on light backgrounds
+
+8. Muted
+Hex: #8A6558
+Use for: secondary text, captions, details, supporting copy
+
+COLOR USAGE RULES
+- Lead with cream and other light backgrounds.
+- Use sky, pink, and lavender as soft supporting accents.
+- Use orange sparingly for attention points and calls to action.
+- Use ink for most text and rust for stronger emphasis.
+- Keep the palette airy and balanced; do not let one strong color dominate.
+- Prefer soft blends and gentle contrast over harsh visual separation.
+
+RECOMMENDED COLOR BALANCE
+- 55% to 70% light neutrals and cream tones
+- 15% to 25% sky or other cool-soft support color
+- 10% to 15% pink or lavender accents
+- 5% to 10% orange or rust for emphasis
+
+TYPOGRAPHY
+
+Current brand-safe font direction
+Primary font:
+Trebuchet MS
+
+Fallback fonts:
+Segoe UI, sans-serif
+
+Typography feeling
+- Clean
+- Friendly
+- Readable
+- Lightly modern
+- Not rigid
+
+Typography rules
+- Use bold or semibold for headings.
+- Keep body text easy to scan and never cramped.
+- Use sentence case or title case; avoid too much ALL CAPS.
+- Use generous line spacing on flyers and social media graphics.
+- Keep text blocks short and breathable.
+
+Recommended hierarchy
+- Main heading: bold, clear, warm, confident
+- Subheading: medium weight, supportive, slightly smaller
+- Body copy: regular weight, very readable
+- Highlight words: use rust or orange, not too many in one layout
+
+BRAND STYLE FOR LAYOUTS
+
+General layout principles
+- Use rounded shapes, soft containers, and gentle section breaks.
+- Leave enough empty space around text and images.
+- Favor layered softness over hard grids.
+- When using backgrounds, soft gradients are preferred over flat harsh fills.
+- Use subtle shadows only when they help separation.
+
+Graphic style
+- Soft organic shapes are welcome.
+- Curves are better than sharp aggressive geometry.
+- Use artwork, thoughtful photography, and elegant composition.
+- If adding decorative elements, keep them light and airy.
+- Visual rhythm should feel calm, not crowded.
+
+Image direction
+- Prefer authentic, warm, light-filled images.
+- Use images that feel human, creative, and emotionally open.
+- Keep image treatment natural; avoid over-editing.
+- If text is placed over an image, add enough contrast for readability.
+
+FLYERS
+
+Flyer design rules
+- Make the headline immediately visible.
+- Keep the message focused on one main offer or event.
+- Use one hero visual or one clean image group.
+- Keep contact details and CTA easy to find.
+- Use cream or very light backgrounds whenever possible.
+- If the flyer is busy with content, reduce decorative accents.
+
+Flyer do's
+- Use clear hierarchy from title to details to CTA.
+- Keep margins comfortable.
+- Use rust or ink for the main text.
+- Add orange only where you want the eye to stop.
+- Keep important details grouped together.
+
+Flyer don'ts
+- Do not use too many font sizes.
+- Do not place text too close to the edges.
+- Do not use neon colors or black-heavy designs.
+- Do not overload the page with multiple competing messages.
+- Do not combine many unrelated image styles in one flyer.
+
+FACEBOOK POSTS
+
+Facebook post direction
+- Design for clarity in-feed.
+- The message should be understood quickly.
+- Use layouts that work well in square or vertical crop.
+- Headlines should be short and easy to read on mobile.
+
+Facebook do's
+- Use one main idea per post.
+- Make typography larger than you think is needed.
+- Use branded color framing around photos when useful.
+- Keep the brand feeling warm and inviting.
+- Include a clear CTA if the post is promotional.
+
+Facebook don'ts
+- Do not fill every area with text.
+- Do not use tiny captions inside the visual.
+- Do not rely on thin low-contrast fonts.
+- Do not use overly salesy language visually.
+- Do not create clutter with too many stickers, icons, or effects.
+
+INSTAGRAM POSTS
+
+Instagram post direction
+- Prioritize visual harmony and a recognizable branded look.
+- Posts should feel elegant and scroll-stopping without shouting.
+- Use repeatable structure so the grid looks cohesive over time.
+
+Instagram do's
+- Keep compositions simple and polished.
+- Use soft branded backgrounds or frames.
+- Use consistent text placement from post to post.
+- Let artwork, workshop images, or branded visuals breathe.
+- Use accent color intentionally, not everywhere.
+
+Instagram don'ts
+- Do not overcrowd the square.
+- Do not use too many decorative fonts.
+- Do not overuse bright orange; keep it as an accent.
+- Do not mix very cold colors with the warm brand palette unless there is a specific reason.
+- Do not publish visuals that feel generic, harsh, or corporate.
+
+DO'S
+- Keep the tone warm, artistic, and trustworthy.
+- Use the brand palette consistently.
+- Maintain readable contrast.
+- Choose calm compositions with clear focal points.
+- Keep the brand feminine, creative, and professional.
+- Use soft gradients, rounded edges, and thoughtful spacing.
+- Design for mobile readability first on social posts.
+
+DON'TS
+- Do not use loud neon palettes.
+- Do not use overly dark or heavy layouts as the default.
+- Do not crowd the design with too much text.
+- Do not mix many unrelated styles in one piece.
+- Do not use sharp, aggressive visual language.
+- Do not make the brand feel cold, trendy-for-a-minute, or mass-market generic.
+
+VOICE AND FEELING
+- Warm
+- Personal
+- Thoughtful
+- Creative
+- Calm
+- Encouraging
+
+The final feeling should always be:
+Clear enough for business, warm enough for art, and soft enough to feel human.

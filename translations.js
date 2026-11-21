@@ -112,6 +112,17 @@ window.SITE_TRANSLATIONS = {
         "emptyDetails": "When artworks become available to collect, you’ll be able to keep your selections here.",
         "summary": "Your selected artworks will appear here. Online checkout is not available yet.",
         "remove": "Remove"
+      },
+      "galleryShop": {
+        "size": "Size",
+        "price": "Price",
+        "description": "Description",
+        "sizeUnknown": "Size not specified",
+        "priceUnknown": "Price not set",
+        "descriptionUnknown": "Description coming soon",
+        "collect": "Collect",
+        "collected": "In Cart",
+        "more": "More from this collection"
       }
     },
     "ru": {
@@ -220,6 +231,17 @@ window.SITE_TRANSLATIONS = {
         "emptyDetails": "Когда работы станут доступны для приобретения, выбранные произведения будут отображаться здесь.",
         "summary": "Здесь будут показаны выбранные вами произведения. Онлайн-оплата пока недоступна.",
         "remove": "Удалить"
+      },
+      "galleryShop": {
+        "size": "Размер",
+        "price": "Цена",
+        "description": "Описание",
+        "sizeUnknown": "Размер не указан",
+        "priceUnknown": "Цена не указана",
+        "descriptionUnknown": "Описание появится позже",
+        "collect": "В корзину",
+        "collected": "В корзине",
+        "more": "Другие работы этой коллекции"
       }
     },
     "he": {
@@ -328,6 +350,17 @@ window.SITE_TRANSLATIONS = {
         "emptyDetails": "כאשר יצירות יהיו זמינות לרכישה, יהיה אפשר לשמור כאן את הבחירות שלך.",
         "summary": "היצירות שבחרת יופיעו כאן. עדיין אין אפשרות לתשלום מקוון.",
         "remove": "הסרה"
+      },
+      "galleryShop": {
+        "size": "גודל",
+        "price": "מחיר",
+        "description": "תיאור",
+        "sizeUnknown": "הגודל לא צוין",
+        "priceUnknown": "המחיר טרם נקבע",
+        "descriptionUnknown": "התיאור יתווסף בקרוב",
+        "collect": "הוספה לסל",
+        "collected": "בסל",
+        "more": "עבודות נוספות מהאוסף"
       }
     }
   },

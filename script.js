@@ -832,6 +832,115 @@ const renderHome = () => {
   homeGrid.append(fragment);
 };
 
+// Gallery catalog details come from per-file metadata when entered in site-data.js.
+// Unknown dimensions, prices, and descriptions remain explicitly marked as missing.
+const galleryShopText = (name, fallback) => getStaticText("galleryShop." + name, fallback);
+const artworkInfo = (section, file) => {
+  const path = getFilePath(file);
+  const record = typeof file === "object" && file !== null ? file : {};
+  return {
+    id: pageKey + ":" + section.id + ":" + path,
+    title: record.title || formatFileName(path),
+    src: section.basePath + "/" + path,
+    size: record.size || galleryShopText("sizeUnknown", "Size not specified"),
+    price: record.price || galleryShopText("priceUnknown", "Price not set"),
+    description: record.description || galleryShopText("descriptionUnknown", "Description coming soon")
+  };
+};
+const galleryDetailLine = (item) => [item.size, item.price, item.description].join(", ");
+const renderGalleryShop = (root, section) => {
+  let selectedIndex = 0;
+  const items = section.files.map((file) => artworkInfo(section, file));
+
+  const redraw = () => {
+    const selected = items[selectedIndex];
+    root.replaceChildren();
+
+    const featured = document.createElement("div");
+    featured.className = "artwork-feature";
+
+    const frame = document.createElement("div");
+    frame.className = "artwork-feature__media";
+    const art = createMediaElement(selected.src, selected.title);
+    frame.append(art);
+    attachLightboxTrigger(frame, selected.src, selected.title);
+
+    const details = document.createElement("div");
+    details.className = "artwork-feature__details";
+    const heading = document.createElement("h3");
+    heading.textContent = selected.title;
+    details.append(heading);
+    for (const [label, value] of [
+      [galleryShopText("size", "Size"), selected.size],
+      [galleryShopText("price", "Price"), selected.price],
+      [galleryShopText("description", "Description"), selected.description]
+    ]) {
+      const block = document.createElement("div");
+      block.className = "artwork-spec";
+      const name = document.createElement("strong");
+      name.textContent = label;
+      const val = document.createElement("span");
+      val.textContent = value;
+      block.append(name, val);
+      details.append(block);
+    }
+
+    const collect = document.createElement("button");
+    collect.type = "button";
+    collect.className = "artwork-collect";
+    const isCollected = () => window.SVETA_CART.getItems().some((item) => item.id === selected.id);
+    const updateCollect = () => {
+      const added = isCollected();
+      collect.textContent = galleryShopText(added ? "collected" : "collect", added ? "In Cart" : "Collect");
+      collect.disabled = added;
+    };
+    updateCollect();
+    collect.addEventListener("click", () => {
+      window.SVETA_CART.addItem(selected);
+      updateCollect();
+    });
+    details.append(collect);
+    featured.append(frame, details);
+    root.append(featured);
+
+    if (items.length > 1) {
+      const list = document.createElement("div");
+      list.className = "artwork-list";
+      const listHeading = document.createElement("h3");
+      listHeading.className = "artwork-list__heading";
+      listHeading.textContent = galleryShopText("more", "More from this collection");
+      list.append(listHeading);
+      items.forEach((item, i) => {
+        if (i === selectedIndex) return;
+        const row = document.createElement("button");
+        row.type = "button";
+        row.className = "artwork-row";
+        const imageHolder = document.createElement("span");
+        imageHolder.className = "artwork-row__thumb";
+        const image = createMediaElement(item.src, item.title);
+        if (image.tagName === "VIDEO") image.controls = false;
+        imageHolder.append(image);
+        const text = document.createElement("span");
+        text.className = "artwork-row__copy";
+        const name = document.createElement("strong");
+        name.textContent = item.title;
+        const values = document.createElement("span");
+        values.textContent = galleryDetailLine(item);
+        text.append(name, values);
+        row.append(imageHolder, text);
+        row.addEventListener("click", () => {
+          selectedIndex = i;
+          redraw();
+          featured.scrollIntoView({block: "nearest", behavior: "auto"});
+        });
+        list.append(row);
+      });
+      root.append(list);
+    }
+  };
+  redraw();
+};
+
 const renderDetailPage = () => {
   const page = getLocalizedPage();
   if (!page) {
@@ -932,32 +1041,11 @@ const renderDetailPage = () => {
     heading.append(eyebrow, titleNode, note);
 
     const grid = document.createElement("div");
-    grid.className = "gallery-grid";
-
-    if (section.files.length) {
-      const groupedFiles = groupFilesByLayout(section.files);
-
-      ["landscape", "standard"].forEach((groupName) => {
-        const files = groupedFiles[groupName];
-        if (!files.length) {
-          return;
-        }
-
-        const group = document.createElement("div");
-        group.className = `gallery-group gallery-group--${groupName}`;
-
-        files.forEach((file) => {
-          group.append(createMediaCard(section.basePath, file, section.title));
-        });
-
-        grid.append(group);
-      });
+    grid.className = "gallery-shop";
+    if (Array.isArray(section.files) && section.files.length) {
+      renderGalleryShop(grid, section);
     } else {
-      grid.append(
-        createEmptyState(
-          getStaticText("gallery.emptyCollection", "This collection is resting between new works.")
-        )
-      );
+      grid.append(createEmptyState(getStaticText("gallery.emptyCollection", "This collection is resting between new works.")));
     }
 
     wrapper.append(heading, grid);
@@ -994,8 +1082,23 @@ const renderCart = () => {
   items.forEach((item) => {
     const row = document.createElement("li");
     row.className = "cart-item";
-    const name = document.createElement("span");
+    if (typeof item.src === "string" && item.src.startsWith("assets/")) {
+      const thumb = document.createElement("img");
+      thumb.className = "cart-item__thumb";
+      thumb.src = encodeURI(item.src);
+      thumb.alt = item.title;
+      thumb.loading = "lazy";
+      row.append(thumb);
+    }
+    const detail = document.createElement("div");
+    detail.className = "cart-item__detail";
+    const name = document.createElement("strong");
     name.textContent = item.title;
+    detail.append(name);
+    const values = document.createElement("span");
+    values.textContent = [item.size, item.price, item.description].filter(Boolean).join(", ");
+    detail.append(values);
+    row.append(detail);
     const remove = document.createElement("button");
     remove.type = "button";
     remove.textContent = getStaticText("cart.remove", "Remove");
@@ -1003,8 +1106,7 @@ const renderCart = () => {
       saveCart(readCart().filter((entry) => entry.id !== item.id));
       renderCart();
     });
-    row.append(name, remove);
-    list.append(row);
+    row.append(remove);
   });
 };
 const applyCartPage = () => {
@@ -1021,7 +1123,7 @@ window.SVETA_CART = {
   addItem: (item) => {
     if (!item || typeof item.id !== "string" || typeof item.title !== "string") return false;
     const items = readCart();
-    if (!items.some((entry) => entry.id === item.id)) items.push({id: item.id, title: item.title});
+    if (!items.some((entry) => entry.id === item.id)) items.push({id: item.id, title: item.title, src: item.src, size: item.size, price: item.price, description: item.description});
     saveCart(items);
     renderCart();
     return true;

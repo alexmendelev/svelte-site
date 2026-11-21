@@ -1319,3 +1319,16 @@ body[data-lang="he"] .lang-link {
     flex-basis: 70px;
   }
 }
+
+/* Active thumbnail stays in its original position while the featured artwork changes. */
+.artwork-row.is-selected {
+  border-color: var(--rust);
+  background: rgba(246, 99, 26, 0.08);
+  box-shadow: inset 3px 0 0 var(--rust);
+}
+body[data-lang="he"] .artwork-row.is-selected {
+  box-shadow: inset -3px 0 0 var(--rust);
+}
+.artwork-row.is-selected .artwork-row__copy strong {
+  color: var(--ink);
+}

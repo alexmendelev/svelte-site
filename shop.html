@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Svelte Design Studio</title>
+    <meta name="description" content="Original art and creative pieces from Svelte Design Studio. Shop coming soon." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="shop">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Svelte Design Studio home">
+          <img src="assets/logo.png" srcset="assets/mobile/logo.png 480w, assets/logo.png 1024w" sizes="(max-width: 768px) 100vw, 120px" alt="Svelte Design Studio logo" />
+          <span>Svelte Design Studio</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav">
+          <a href="index.html" data-nav-page="home">Home</a>
+          <a href="shop.html" data-nav-page="shop">Shop</a>
+          <a href="original-art.html" data-nav-page="original-art">Original Art</a>
+          <a href="master-classes.html" data-nav-page="master-classes">Master Classes</a>
+          <a href="my-journey.html" data-nav-page="my-journey">My Journey</a>
+          <a href="contact-me.html" data-nav-page="contact-me">Contact Me</a>
+        </nav>
+      </header>
+      <main class="page">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow" id="page-kicker">Something new is taking shape.</p>
+            <h1 id="page-title">Shop</h1>
+            <p class="lead" id="page-summary">A curated selection of original artwork and creative pieces is on its way. The shop is under construction — please check back soon.</p>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <p id="site-footer-text">&copy; Svelte Design Studio. Art, design, and quiet joy.</p>
+      </footer>
+    </div>
+    <script src="site-data.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

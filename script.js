@@ -805,11 +805,11 @@ const renderHome = () => {
 
     const text = document.createElement("p");
     text.className = "card-text";
-    text.textContent = page.summary;
+    text.textContent = page.cardSummary || page.summary;
 
     const meta = document.createElement("p");
     meta.className = "card-meta";
-    meta.textContent = page.sections.length ? cardMeta.sections : cardMeta.noSections;
+    meta.textContent = page.cardMeta || (page.sections.length ? cardMeta.sections : cardMeta.noSections);
 
     card.append(eyebrow, title, text, meta);
     fragment.append(card);

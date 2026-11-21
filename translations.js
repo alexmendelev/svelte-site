@@ -18,7 +18,8 @@ window.SITE_TRANSLATIONS = {
         "master-classes": "Master Classes",
         "original-art": "Original Art",
         "my-journey": "My Journey",
-        "contact-me": "Contact Me"
+        "contact-me": "Contact Me",
+        "shop": "Shop"
       },
       "language": {
         "unavailable": "Coming soon"
@@ -46,7 +47,8 @@ window.SITE_TRANSLATIONS = {
           "master-classes": "Quiet creative practice",
           "original-art": "Texture, color, stillness",
           "my-journey": "A path back to art",
-          "contact-me": "A kind beginning"
+          "contact-me": "A kind beginning",
+          "shop": "Art to make your own"
         },
         "cardMeta": {
           "sections": "Open the galleries",
@@ -115,7 +117,8 @@ window.SITE_TRANSLATIONS = {
         "master-classes": "Мастер-классы",
         "original-art": "Авторские работы",
         "my-journey": "Мой путь",
-        "contact-me": "Контакты"
+        "contact-me": "Контакты",
+        "shop": "Магазин"
       },
       "language": {
         "unavailable": "Скоро появится"
@@ -143,7 +146,8 @@ window.SITE_TRANSLATIONS = {
           "master-classes": "Спокойная творческая практика",
           "original-art": "Цвет, фактура, настроение",
           "my-journey": "Путь к искусству",
-          "contact-me": "Начать разговор"
+          "contact-me": "Начать разговор",
+          "shop": "Искусство для вашего дома"
         },
         "cardMeta": {
           "sections": "Открыть галереи",
@@ -212,7 +216,8 @@ window.SITE_TRANSLATIONS = {
         "master-classes": "סדנאות",
         "original-art": "אמנות מקורית",
         "my-journey": "הדרך שלי",
-        "contact-me": "צור קשר"
+        "contact-me": "צור קשר",
+        "shop": "חנות"
       },
       "language": {
         "unavailable": "בקרוב"
@@ -240,7 +245,8 @@ window.SITE_TRANSLATIONS = {
           "master-classes": "תרגול יצירתי שקט",
           "original-art": "בין צבע לשתיקה",
           "my-journey": "דרך חזרה לאמנות",
-          "contact-me": "נתחיל משהו יפה"
+          "contact-me": "נתחיל משהו יפה",
+          "shop": "אמנות שמגיעה הביתה"
         },
         "cardMeta": {
           "sections": "פתחו את הגלריות",
@@ -402,6 +408,17 @@ window.SITE_TRANSLATIONS = {
         "heroKicker": "A warm message is always welcome here.",
         "heroTitle": "Contact Me",
         "summary": "If you would like to get in touch about workshops, design, or original art, you will find my contact details and a simple message form here."
+      },
+      "shop": {
+        "navLabel": "Shop",
+        "menuLabel": "Shop",
+        "heroKicker": "Something new is taking shape.",
+        "heroTitle": "Shop",
+        "summary": "A curated selection of original artwork and creative pieces is on its way. The shop is under construction — please check back soon.",
+        "sections": [],
+        "panels": [],
+        "cardSummary": "Discover original artwork and creative pieces selected for bringing character and warmth into your space. Our shop is coming soon.",
+        "cardMeta": "Coming soon"
       }
     },
     "ru": {
@@ -507,6 +524,17 @@ window.SITE_TRANSLATIONS = {
         "heroKicker": "Здесь всегда рады вашему сообщению.",
         "heroTitle": "Контакты",
         "summary": "Здесь вы можете связаться со мной по поводу мастер-классов, дизайна или авторских работ, здесь вы найдёте мои контакты и удобную форму для сообщения."
+      },
+      "shop": {
+        "navLabel": "Магазин",
+        "menuLabel": "Магазин",
+        "heroKicker": "Здесь скоро появится что-то новое.",
+        "heroTitle": "Магазин",
+        "summary": "Скоро здесь появятся авторские работы и творческие изделия. Магазин находится в разработке — загляните немного позже.",
+        "sections": [],
+        "panels": [],
+        "cardSummary": "Авторские работы и творческие изделия, которые добавят вашему пространству характер и тепло. Магазин скоро откроется.",
+        "cardMeta": "Скоро открытие"
       }
     },
     "he": {
@@ -612,6 +640,17 @@ window.SITE_TRANSLATIONS = {
         "heroKicker": "הודעה חמה תמיד מתקבלת כאן בברכה.",
         "heroTitle": "צור קשר",
         "summary": "אם תרצו ליצור קשר בנוגע לסדנאות, עיצוב או אמנות מקורית, תמצאו כאן את פרטי הקשר שלי וטופס הודעה פשוט."
+      },
+      "shop": {
+        "navLabel": "חנות",
+        "menuLabel": "חנות",
+        "heroKicker": "משהו חדש מתחיל להיווצר כאן.",
+        "heroTitle": "חנות",
+        "summary": "מבחר יצירות אמנות מקוריות ופריטים יצירתיים יופיע כאן בקרוב. החנות בהקמה — כדאי לחזור ולבקר.",
+        "sections": [],
+        "panels": [],
+        "cardSummary": "יצירות אמנות מקוריות ופריטים יצירתיים שיוסיפו אופי וחמימות לבית שלכם. החנות תיפתח בקרוב.",
+        "cardMeta": "בקרוב"
       }
     }
   }

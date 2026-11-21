@@ -696,22 +696,22 @@ window.SITE_DATA = {
       "file": "my-journey.html",
       "navLabel": "My Journey",
       "menuLabel": "My Journey",
-      "heroKicker": "A creative path led by color, curiosity, and quiet persistence.",
+      "heroKicker": "A creative path from mathematics and technology to making art.",
       "heroTitle": "My Journey",
-      "summary": "Numbers and colors, code and creativity, analysis and intuition have all shaped the same path, slowly leading back to art, design, and teaching.",
+      "summary": "After years of balancing logic and creativity, I returned to art through workshops. Today my focus is on creating original artwork and commissions, especially through Gelli Plate printing and collage.",
       "folderLabel": "MyJourney",
       "panels": [
         {
-          "title": "Two Worlds From the Start",
-          "text": "My story started early, with two very different kinds of homework: mathematics and art. As a child, I studied in a strong mathematics class and, at the same time, attended Art School, where I graduated from the painting program. Numbers on one side, colors on the other. Apparently, I never liked choosing just one world. Professionally, I spent decades in High-Tech, working in programming and data analysis. But throughout all those years, art never left me alone, or more accurately, I never left it alone. I kept drawing, painting, and experimenting with different techniques: watercolor, oil, acrylic, cold and hot batik, pastels, and fineliners. Some people collect stamps. I collected creative techniques."
+          "title": "Mathematics and Art from the Beginning",
+          "text": "My story began in two worlds at once: mathematics and art. As a child, I studied in a mathematics-focused program while also attending art school, where I completed painting studies. On one side were formulas and logic; on the other, color, composition, and drawing. I never wanted to choose just one. My professional life eventually took me into high-tech, programming, and data analysis, but I continued painting and experimenting with watercolor, oil, acrylic, batik, pastels, and fineliners. Art remained a constant thread."
         },
         {
-          "title": "Returning to Design",
-          "text": "After many years of code, logic, and data, I felt it was time to return more fully to what I have always loved: graphic design, drawing, and teaching. I later graduated in Graphic Design and Digital Marketing from Tzedek Design Academy. There I discovered that design is not only about making things beautiful. It is a powerful way to help businesses express who they are, communicate clearly, and solve real problems."
+          "title": "Sharing Art Through Workshops",
+          "text": "As I returned more fully to art, teaching became an important part of my creative life. I led small-group workshops in Zentangle and my own combination of Neuro-Art and doodling, inviting people to slow down, experiment, and enjoy creating without pressure. Those classes gave me a wonderful opportunity to share what I had learned. Over time, though, I felt a growing desire to spend more of my creative energy on making my own work."
         },
         {
-          "title": "Teaching and Homecoming",
-          "text": "Teaching became another important part of my path. During the last year, I have led multiple masterclasses for small groups, teaching Zentangle as well as my own unique combination of Neuro-Art and doodle techniques. These creative practices help people slow down, reduce stress, and create a beautiful sense of inner harmony, something especially valuable in a complicated reality. And yes, I still continue to draw and paint. I keep exploring new tools, textures, and ideas, and I enjoy every moment of this journey. It turns out that after all the years of work, analysis, and responsibility, coming back to art does not feel like starting over. It feels like coming home."
+          "title": "A New Focus: Original Art and Commissions",
+          "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct. Workshops remain a meaningful part of my journey, but creating art—and developing personal work for others—is where my attention is now."
         }
       ],
       "sections": []

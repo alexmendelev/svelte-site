@@ -703,15 +703,15 @@ window.SITE_DATA = {
       "panels": [
         {
           "title": "Mathematics and Art from the Beginning",
-          "text": "My story began in two worlds at once: mathematics and art. As a child, I studied in a mathematics-focused program while also attending art school, where I completed painting studies. On one side were formulas and logic; on the other, color, composition, and drawing. I never wanted to choose just one. My professional life eventually took me into high-tech, programming, and data analysis, but I continued painting and experimenting with watercolor, oil, acrylic, batik, pastels, and fineliners. Art remained a constant thread."
+          "text": "My story began in two worlds at once: mathematics and art. As a child, I studied in a mathematics-focused program while also attending art school, where I completed painting studies. On one side were formulas and logic; on the other, color, composition, and drawing. I never wanted to choose just one. My professional life eventually took me into high-tech, programming, and data analysis, but I continued painting and experimenting with watercolor, oil, acrylic, batik, pastels, fineliners, Gelli Plate printing, and collage. Art remained a constant thread."
+        },
+        {
+          "title": "Original Art and Commissions",
+          "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct. Workshops remain a meaningful part of my journey, but creating art—and developing personal work for others—is where my attention is now."
         },
         {
           "title": "Sharing Art Through Workshops",
           "text": "As I returned more fully to art, teaching became an important part of my creative life. I led small-group workshops in Zentangle and my own combination of Neuro-Art and doodling, inviting people to slow down, experiment, and enjoy creating without pressure. Those classes gave me a wonderful opportunity to share what I had learned. Over time, though, I felt a growing desire to spend more of my creative energy on making my own work."
-        },
-        {
-          "title": "A New Focus: Original Art and Commissions",
-          "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct. Workshops remain a meaningful part of my journey, but creating art—and developing personal work for others—is where my attention is now."
         }
       ],
       "sections": []

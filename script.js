@@ -908,6 +908,7 @@ const renderGalleryShop = (root, section) => {
       const selected = i === index;
       row.classList.toggle("is-selected", selected);
       button.setAttribute("aria-expanded", String(selected));
+      button.tabIndex = selected ? 0 : -1;
       if (selected) {
         detail.replaceChildren(makeDetails(items[i]));
         detail.hidden = false;
@@ -939,6 +940,16 @@ const renderGalleryShop = (root, section) => {
 
     selectButton.append(imageHolder, copy);
     selectButton.addEventListener("click", () => selectArtwork(i));
+    selectButton.addEventListener("keydown", (event) => {
+      const delta = event.key === "ArrowDown" || event.key === "ArrowRight" ? 1
+        : event.key === "ArrowUp" || event.key === "ArrowLeft" ? -1 : 0;
+      if (!delta) return;
+      event.preventDefault();
+      const nextIndex = Math.max(0, Math.min(items.length - 1, i + delta));
+      selectArtwork(nextIndex);
+      rows[nextIndex].button.focus({ preventScroll: true });
+      rows[nextIndex].row.scrollIntoView({ block: "nearest", behavior: "instant" });
+    });
 
     const detail = document.createElement("div");
     detail.className = "artwork-row__detail";

@@ -34,7 +34,7 @@ window.SITE_TRANSLATIONS = {
       "home": {
         "documentTitle": "Sveta Mendelev",
         "metaDescription": "Mindful workshops, original art, and graphic design by Sveta Mendelev.",
-        "heroEyebrow": "Art, design, and workshops created with calm hands and an open heart.",
+        "heroEyebrow": "Art and workshops created with an open heart.",
         "heroTitle": "Sveta Mendelev",
         "lead": "Explore mindful workshops, original art, and visual design created to feel warm, clear, and quietly memorable.",
         "ctaLabel": "Send a WhatsApp message",

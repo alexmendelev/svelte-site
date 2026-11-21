@@ -1428,3 +1428,32 @@ body[data-lang="he"] .artwork-row.is-selected {
   .artwork-row.is-selected .artwork-row__thumb img,
   .artwork-row.is-selected .artwork-row__thumb video { max-height: 240px; }
 }
+
+
+/* Arrow-navigable in-place gallery: restore the original featured artwork scale. */
+@media (min-width: 851px) {
+  .artwork-row.is-selected {
+    grid-template-columns: minmax(0, 1.55fr) minmax(260px, .8fr);
+    align-items: center;
+  }
+  .artwork-row.is-selected .artwork-row__thumb img,
+  .artwork-row.is-selected .artwork-row__thumb video {
+    max-height: 640px;
+  }
+}
+@media (min-width: 521px) and (max-width: 850px) {
+  .artwork-row.is-selected {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: center;
+  }
+  .artwork-row.is-selected .artwork-row__thumb img,
+  .artwork-row.is-selected .artwork-row__thumb video {
+    max-height: 420px;
+  }
+}
+@media (max-width: 520px) {
+  .artwork-row.is-selected .artwork-row__thumb img,
+  .artwork-row.is-selected .artwork-row__thumb video {
+    max-height: 440px;
+  }
+}

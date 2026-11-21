@@ -909,10 +909,12 @@ const renderGalleryShop = (root, section) => {
       row.classList.toggle("is-selected", selected);
       button.setAttribute("aria-expanded", String(selected));
       button.tabIndex = selected ? 0 : -1;
-      if (selected) {
+      // Keep the active details in the DOM while they remain selected.
+      // Rebuilding a focused Collect button steals keyboard focus.
+      if (selected && detail.hidden) {
         detail.replaceChildren(makeDetails(items[i]));
         detail.hidden = false;
-      } else {
+      } else if (!selected && !detail.hidden) {
         detail.hidden = true;
         detail.replaceChildren();
       }
@@ -940,16 +942,6 @@ const renderGalleryShop = (root, section) => {
 
     selectButton.append(imageHolder, copy);
     selectButton.addEventListener("click", () => selectArtwork(i));
-    selectButton.addEventListener("keydown", (event) => {
-      const delta = event.key === "ArrowDown" || event.key === "ArrowRight" ? 1
-        : event.key === "ArrowUp" || event.key === "ArrowLeft" ? -1 : 0;
-      if (!delta) return;
-      event.preventDefault();
-      const nextIndex = Math.max(0, Math.min(items.length - 1, i + delta));
-      selectArtwork(nextIndex);
-      rows[nextIndex].button.focus({ preventScroll: true });
-      rows[nextIndex].row.scrollIntoView({ block: "nearest", behavior: "instant" });
-    });
 
     const detail = document.createElement("div");
     detail.className = "artwork-row__detail";
@@ -959,6 +951,23 @@ const renderGalleryShop = (root, section) => {
     list.append(row);
   });
 
+  // One keyboard handler for the gallery, including the selected item's
+  // Collect button. Tab and Shift+Tab retain the browser's native behavior.
+  list.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    const delta = event.key === "ArrowDown" || event.key === "ArrowRight" ? 1
+      : event.key === "ArrowUp" || event.key === "ArrowLeft" ? -1 : 0;
+    if (!delta) return;
+    const activeRow = event.target.closest(".artwork-row");
+    if (!activeRow || !list.contains(activeRow)) return;
+    const index = rows.findIndex(({ row }) => row === activeRow);
+    if (index < 0) return;
+    event.preventDefault();
+    const next = Math.max(0, Math.min(rows.length - 1, index + delta));
+    selectArtwork(next);
+    rows[next].button.focus({ preventScroll: true });
+    rows[next].row.scrollIntoView({ block: "nearest" });
+  });
   root.append(list);
   selectArtwork(0);
 };

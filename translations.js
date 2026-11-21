@@ -117,12 +117,12 @@ window.SITE_TRANSLATIONS = {
         "size": "Size",
         "price": "Price",
         "description": "Description",
-        "sizeUnknown": "Size not specified",
-        "priceUnknown": "Price not set",
-        "descriptionUnknown": "Description coming soon",
         "collect": "Collect",
         "collected": "In Cart",
-        "more": "More from this collection"
+        "more": "Artwork list",
+        "status": "Status",
+        "available": "Available",
+        "sold": "SOLD"
       }
     },
     "ru": {
@@ -236,12 +236,12 @@ window.SITE_TRANSLATIONS = {
         "size": "Размер",
         "price": "Цена",
         "description": "Описание",
-        "sizeUnknown": "Размер не указан",
-        "priceUnknown": "Цена не указана",
-        "descriptionUnknown": "Описание появится позже",
         "collect": "В корзину",
         "collected": "В корзине",
-        "more": "Другие работы этой коллекции"
+        "more": "Список работ",
+        "status": "Статус",
+        "available": "Доступна",
+        "sold": "ПРОДАНО"
       }
     },
     "he": {
@@ -355,12 +355,12 @@ window.SITE_TRANSLATIONS = {
         "size": "גודל",
         "price": "מחיר",
         "description": "תיאור",
-        "sizeUnknown": "הגודל לא צוין",
-        "priceUnknown": "המחיר טרם נקבע",
-        "descriptionUnknown": "התיאור יתווסף בקרוב",
         "collect": "הוספה לסל",
         "collected": "בסל",
-        "more": "עבודות נוספות מהאוסף"
+        "more": "רשימת יצירות",
+        "status": "סטטוס",
+        "available": "זמין",
+        "sold": "נמכר"
       }
     }
   },

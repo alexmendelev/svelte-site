@@ -393,15 +393,15 @@ window.SITE_TRANSLATIONS = {
         "panels": [
           {
             "title": "Mathematics and Art from the Beginning",
-            "text": "My story began in two worlds at once: mathematics and art. As a child, I studied in a mathematics-focused program while also attending art school, where I completed painting studies. On one side were formulas and logic; on the other, color, composition, and drawing. I never wanted to choose just one. My professional life eventually took me into high-tech, programming, and data analysis, but I continued painting and experimenting with watercolor, oil, acrylic, batik, pastels, and fineliners. Art remained a constant thread."
+            "text": "My story began in two worlds at once: mathematics and art. As a child, I studied in a mathematics-focused program while also attending art school, where I completed painting studies. On one side were formulas and logic; on the other, color, composition, and drawing. I never wanted to choose just one. My professional life eventually took me into high-tech, programming, and data analysis, but I continued painting and experimenting with watercolor, oil, acrylic, batik, pastels, fineliners, Gelli Plate printing, and collage. Art remained a constant thread."
+          },
+          {
+            "title": "Original Art and Commissions",
+            "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct. Workshops remain a meaningful part of my journey, but creating art—and developing personal work for others—is where my attention is now."
           },
           {
             "title": "Sharing Art Through Workshops",
             "text": "As I returned more fully to art, teaching became an important part of my creative life. I led small-group workshops in Zentangle and my own combination of Neuro-Art and doodling, inviting people to slow down, experiment, and enjoy creating without pressure. Those classes gave me a wonderful opportunity to share what I had learned. Over time, though, I felt a growing desire to spend more of my creative energy on making my own work."
-          },
-          {
-            "title": "A New Focus: Original Art and Commissions",
-            "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct. Workshops remain a meaningful part of my journey, but creating art—and developing personal work for others—is where my attention is now."
           }
         ]
       },
@@ -509,15 +509,15 @@ window.SITE_TRANSLATIONS = {
         "panels": [
           {
             "title": "Математика и искусство с самого начала",
-            "text": "Моя история началась сразу в двух мирах: математике и искусстве. В детстве я училась в математическом классе и одновременно посещала художественную школу, где занималась живописью. С одной стороны — формулы и логика, с другой — цвет, композиция и рисунок. Мне никогда не хотелось выбирать что-то одно. Позже профессиональная жизнь привела меня в high-tech, программирование и анализ данных. Но я продолжала рисовать и пробовать разные техники: акварель, масло, акрил, батик, пастель и линеры. Искусство всегда оставалось частью моей жизни."
+            "text": "Моя история началась сразу в двух мирах: математике и искусстве. В детстве я училась в математическом классе и одновременно посещала художественную школу, где занималась живописью. С одной стороны — формулы и логика, с другой — цвет, композиция и рисунок. Мне никогда не хотелось выбирать что-то одно. Позже профессиональная жизнь привела меня в high-tech, программирование и анализ данных. Но я продолжала рисовать и пробовать разные техники: акварель, масло, акрил, батик, пастель, линеры, печать на Gelli Plate и коллаж. Искусство всегда оставалось частью моей жизни."
+          },
+          {
+            "title": "Авторские работы и заказы",
+            "text": "Сегодня я сосредоточена на создании оригинальных произведений и работ на заказ. Особенно увлекли меня две техники: печать на Gelli Plate и коллаж. Gelli Plate позволяет экспериментировать со слоями, фактурами, отпечатками и неожиданными сочетаниями цвета; коллаж помогает соединять эти элементы в новые композиции. Мне нравится сочетание свободы эксперимента и продуманного замысла, благодаря которому каждая работа получается особенной. Мастер-классы остаются важной частью моего пути, но сейчас главное для меня — создавать собственное искусство и индивидуальные работы для других."
           },
           {
             "title": "От творчества к мастер-классам",
             "text": "Когда я стала уделять искусству больше времени, важное место в моей жизни заняло преподавание. Я проводила мастер-классы для небольших групп по Zentangle и своей комбинации Neuro-Art и дудлинга. Мне хотелось дать людям возможность замедлиться, поэкспериментировать и получить удовольствие от самого процесса творчества. Это был ценный опыт, которым я с радостью делилась. Но постепенно мне всё сильнее хотелось посвящать время собственным работам."
-          },
-          {
-            "title": "Новый фокус: авторские работы и заказы",
-            "text": "Сегодня я сосредоточена на создании оригинальных произведений и работ на заказ. Особенно увлекли меня две техники: печать на Gelli Plate и коллаж. Gelli Plate позволяет экспериментировать со слоями, фактурами, отпечатками и неожиданными сочетаниями цвета; коллаж помогает соединять эти элементы в новые композиции. Мне нравится сочетание свободы эксперимента и продуманного замысла, благодаря которому каждая работа получается особенной. Мастер-классы остаются важной частью моего пути, но сейчас главное для меня — создавать собственное искусство и индивидуальные работы для других."
           }
         ]
       },
@@ -625,15 +625,15 @@ window.SITE_TRANSLATIONS = {
         "panels": [
           {
             "title": "מתמטיקה ואמנות מההתחלה",
-            "text": "הסיפור שלי התחיל בשני עולמות במקביל: מתמטיקה ואמנות. בילדותי למדתי בכיתה עם דגש על מתמטיקה, ובאותו זמן למדתי בבית ספר לאמנות, שם למדתי ציור. מצד אחד נוסחאות והיגיון, ומצד שני צבע, קומפוזיציה ורישום. מעולם לא רציתי לבחור רק באחד מהם. בהמשך הובילו אותי חיי המקצועיים להיי-טק, לתכנות ולניתוח נתונים, אבל המשכתי לצייר ולהתנסות בצבעי מים, שמן, אקריליק, בטיק, פסטל ועטי רישום. האמנות תמיד נשארה חלק מחיי."
+            "text": "הסיפור שלי התחיל בשני עולמות במקביל: מתמטיקה ואמנות. בילדותי למדתי בכיתה עם דגש על מתמטיקה, ובאותו זמן למדתי בבית ספר לאמנות, שם למדתי ציור. מצד אחד נוסחאות והיגיון, ומצד שני צבע, קומפוזיציה ורישום. מעולם לא רציתי לבחור רק באחד מהם. בהמשך הובילו אותי חיי המקצועיים להיי-טק, לתכנות ולניתוח נתונים, אבל המשכתי לצייר ולהתנסות בצבעי מים, שמן, אקריליק, בטיק, פסטל, עטי רישום, הדפסי Gelli Plate וקולאז׳. האמנות תמיד נשארה חלק מחיי."
+          },
+          {
+            "title": "יצירות מקוריות והזמנות אישיות",
+            "text": "כיום אני מתמקדת ביצירת עבודות אמנות מקוריות ועבודות בהזמנה אישית. שתי טכניקות הפכו למרכזיות בעשייה שלי: הדפסי Gelli Plate וקולאז׳. ההדפסים מאפשרים לי לחקור שכבות, מרקמים, סימנים בלתי צפויים ושילובי צבעים מפתיעים; הקולאז׳ מאפשר לי לחבר את החלקים המודפסים לקומפוזיציות חדשות. אני אוהבת את האיזון בין ניסוי חופשי לכוונה מודעת, ואת האפשרות ליצור בכל פעם עבודה ייחודית. הסדנאות עדיין חלק משמעותי מהמסע שלי, אך כעת עיקר תשומת הלב שלי מוקדש ליצירה אישית ולעבודות מיוחדות עבור אחרים."
           },
           {
             "title": "לחלוק את האמנות בסדנאות",
             "text": "כשחזרתי להקדיש יותר זמן לאמנות, ההוראה הפכה לחלק חשוב בחיי היצירה שלי. הנחיתי סדנאות לקבוצות קטנות בזנטנגל ובשילוב אישי של Neuro-Art ודודלינג. רציתי לאפשר לאנשים להאט, להתנסות וליהנות מעצם תהליך היצירה, בלי לחץ. זו הייתה הזדמנות משמעותית לחלוק את מה שלמדתי. עם הזמן הרגשתי רצון הולך וגובר להקדיש יותר מהאנרגיה היצירתית שלי לעבודות האישיות שלי."
-          },
-          {
-            "title": "המיקוד החדש: יצירות מקוריות והזמנות אישיות",
-            "text": "כיום אני מתמקדת ביצירת עבודות אמנות מקוריות ועבודות בהזמנה אישית. שתי טכניקות הפכו למרכזיות בעשייה שלי: הדפסי Gelli Plate וקולאז׳. ההדפסים מאפשרים לי לחקור שכבות, מרקמים, סימנים בלתי צפויים ושילובי צבעים מפתיעים; הקולאז׳ מאפשר לי לחבר את החלקים המודפסים לקומפוזיציות חדשות. אני אוהבת את האיזון בין ניסוי חופשי לכוונה מודעת, ואת האפשרות ליצור בכל פעם עבודה ייחודית. הסדנאות עדיין חלק משמעותי מהמסע שלי, אך כעת עיקר תשומת הלב שלי מוקדש ליצירה אישית ולעבודות מיוחדות עבור אחרים."
           }
         ]
       },

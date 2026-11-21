@@ -387,21 +387,21 @@ window.SITE_TRANSLATIONS = {
       "my-journey": {
         "navLabel": "My Journey",
         "menuLabel": "My Journey",
-        "heroKicker": "A path where mathematics and drawing, logic and intuition, gradually became part of the same whole.",
+        "heroKicker": "A creative path from mathematics and technology to making art.",
         "heroTitle": "My Journey",
-        "summary": "Mathematics and drawing, programming and creativity, analysis and intuition — all of it gradually brought me back to art, design, and teaching.",
+        "summary": "After years of balancing logic and creativity, I returned to art through workshops. Today my focus is on creating original artwork and commissions, especially through Gelli Plate printing and collage.",
         "panels": [
           {
             "title": "Mathematics and Art from the Beginning",
-            "text": "My story began early, and in two very different worlds at once: mathematics and art. As a child, I studied in a strong mathematics program while also attending art school, where I completed painting studies. On one side there were formulas and logic; on the other, color, composition, and drawing. I never really wanted to choose only one. My professional life later moved into high-tech: programming, data work, and analytics. But art always stayed close. I kept drawing, painting, and trying new techniques: watercolor, oil, acrylic, cold and hot batik, pastel, and fineliners. Some people collect stamps. I seem to have collected art techniques."
+            "text": "My story began in two worlds at once: mathematics and art. As a child, I studied in a mathematics-focused program while also attending art school, where I completed painting studies. On one side were formulas and logic; on the other, color, composition, and drawing. I never wanted to choose just one. My professional life eventually took me into high-tech, programming, and data analysis, but I continued painting and experimenting with watercolor, oil, acrylic, batik, pastels, and fineliners. Art remained a constant thread."
           },
           {
-            "title": "Returning to Design",
-            "text": "After many years of code, logic, and analytics, I felt more and more clearly that I wanted to return to what I truly love: graphic design, drawing, and teaching. Later, I graduated from Tzedek Design Academy in Graphic Design and Digital Marketing. That was where I fully understood that design is not only about beauty. It is a way to help a business express itself more clearly, communicate with intention, and solve real problems."
+            "title": "Sharing Art Through Workshops",
+            "text": "As I returned more fully to art, teaching became an important part of my creative life. I led small-group workshops in Zentangle and my own combination of Neuro-Art and doodling, inviting people to slow down, experiment, and enjoy creating without pressure. Those classes gave me a wonderful opportunity to share what I had learned. Over time, though, I felt a growing desire to spend more of my creative energy on making my own work."
           },
           {
-            "title": "Teaching and the Feeling of Home",
-            "text": "Over time, teaching became another important part of my path. During the past year, I have led several workshops for small groups, teaching Zentangle as well as my own combination of Neuro-Art and doodle techniques. These creative practices help people slow down, reduce stress, and reconnect with a sense of inner harmony — something especially valuable in a difficult reality. And yes, I still keep drawing and painting. I continue exploring new tools, textures, and ideas, and I enjoy every stage of that process. After all those years of work, responsibility, and analysis, returning to art did not feel like starting from zero. It felt more like coming home."
+            "title": "A New Focus: Original Art and Commissions",
+            "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct. Workshops remain a meaningful part of my journey, but creating art—and developing personal work for others—is where my attention is now."
           }
         ]
       },
@@ -503,21 +503,21 @@ window.SITE_TRANSLATIONS = {
       "my-journey": {
         "navLabel": "Мой путь",
         "menuLabel": "Мой путь",
-        "heroKicker": "Путь, в котором математика и рисование, логика и интуиция со временем соединились в одно целое.",
+        "heroKicker": "Творческий путь от математики и технологий к созданию искусства.",
         "heroTitle": "Мой путь",
-        "summary": "Математика и рисование, программирование и творчество, аналитика и интуиция — всё это постепенно вернуло меня к искусству, дизайну и преподаванию.",
+        "summary": "После многих лет, в которых логика соседствовала с творчеством, я вернулась к искусству через мастер-классы. Сегодня мой главный интерес — авторские работы и произведения на заказ, особенно в техниках печати на Gelli Plate и коллажа.",
         "panels": [
           {
             "title": "Математика и искусство с самого начала",
-            "text": "Моя история началась рано и сразу в двух очень разных мирах: математике и искусстве. В детстве я училась в математическом классе и одновременно ходила в художественную школу. С одной стороны были формулы и логика, с другой — цвет, композиция и рисунок. Мне, пожалуй, никогда не хотелось выбирать что-то одно. Профессиональная жизнь надолго привела меня в сферу high-tech: программирование, работа с данными, аналитика. Но искусство всё это время оставалось рядом. Я продолжала рисовать, писать и пробовать новые техники: акварель, масло, акрил, холодный и горячий батик, пастель. Кто-то коллекционирует марки. Я, кажется, коллекционировала художественные техники."
+            "text": "Моя история началась сразу в двух мирах: математике и искусстве. В детстве я училась в математическом классе и одновременно посещала художественную школу, где занималась живописью. С одной стороны — формулы и логика, с другой — цвет, композиция и рисунок. Мне никогда не хотелось выбирать что-то одно. Позже профессиональная жизнь привела меня в high-tech, программирование и анализ данных. Но я продолжала рисовать и пробовать разные техники: акварель, масло, акрил, батик, пастель и линеры. Искусство всегда оставалось частью моей жизни."
           },
           {
-            "title": "Возвращение к дизайну",
-            "text": "Спустя многие годы программирования, логики и аналитики я всё яснее чувствовала, что хочу вернуться к графическому дизайну, рисованию и преподаванию. Позже я окончила Tzedek Design Academy по направлениям Graphic Design и Digital Marketing. Именно там я окончательно поняла, что дизайн — это не только про красоту. Это способ помочь бизнесу точнее выразить себя, говорить ясно и решать реальные задачи."
+            "title": "От творчества к мастер-классам",
+            "text": "Когда я стала уделять искусству больше времени, важное место в моей жизни заняло преподавание. Я проводила мастер-классы для небольших групп по Zentangle и своей комбинации Neuro-Art и дудлинга. Мне хотелось дать людям возможность замедлиться, поэкспериментировать и получить удовольствие от самого процесса творчества. Это был ценный опыт, которым я с радостью делилась. Но постепенно мне всё сильнее хотелось посвящать время собственным работам."
           },
           {
-            "title": "Преподавание и чувство дома",
-            "text": "Со временем преподавание стало ещё одной важной частью моего пути. За последний год я провела несколько мастер-классов для небольших групп, обучая Zentangle, а также своей авторской комбинации техник Neuro-Art и doodle. Эти творческие практики помогают людям замедлиться, снизить уровень стресса и почувствовать внутреннюю гармонию — особенно ценную в непростой реальности. И да, я по-прежнему продолжаю рисовать и писать. Я всё время исследую новые инструменты, фактуры и идеи и получаю удовольствие от каждого этапа этого пути. Оказалось, что после многих лет работы программистом, возвращение к искусству воспринимается как возвращение домой."
+            "title": "Новый фокус: авторские работы и заказы",
+            "text": "Сегодня я сосредоточена на создании оригинальных произведений и работ на заказ. Особенно увлекли меня две техники: печать на Gelli Plate и коллаж. Gelli Plate позволяет экспериментировать со слоями, фактурами, отпечатками и неожиданными сочетаниями цвета; коллаж помогает соединять эти элементы в новые композиции. Мне нравится сочетание свободы эксперимента и продуманного замысла, благодаря которому каждая работа получается особенной. Мастер-классы остаются важной частью моего пути, но сейчас главное для меня — создавать собственное искусство и индивидуальные работы для других."
           }
         ]
       },
@@ -619,21 +619,21 @@ window.SITE_TRANSLATIONS = {
       "my-journey": {
         "navLabel": "הדרך שלי",
         "menuLabel": "הדרך שלי",
-        "heroKicker": "דרך שבה מתמטיקה וציור, לוגיקה ואינטואיציה, הפכו בהדרגה לחלק מאותו שלם.",
+        "heroKicker": "מסע יצירתי ממתמטיקה וטכנולוגיה אל יצירת אמנות.",
         "heroTitle": "הדרך שלי",
-        "summary": "מתמטיקה וציור, תכנות ויצירה, אנליזה ואינטואיציה — כל זה הביא אותי בהדרגה חזרה לאמנות, עיצוב והוראה.",
+        "summary": "אחרי שנים שבהן שילבתי בין חשיבה אנליטית ליצירתיות, חזרתי לאמנות דרך סדנאות. כיום אני מתמקדת ביצירות מקוריות ובהזמנות אישיות, במיוחד בהדפסי Gelli Plate ובקולאז׳.",
         "panels": [
           {
             "title": "מתמטיקה ואמנות מההתחלה",
-            "text": "הסיפור שלי התחיל מוקדם, ובשני עולמות שונים מאוד בו-זמנית: מתמטיקה ואמנות. בילדותי למדתי בכיתה מתמטית ובמקביל למדתי בבית ספר לאמנות, שם השלמתי לימודי ציור. מצד אחד היו נוסחאות ולוגיקה; מצד שני, צבע, קומפוזיציה וציור. מעולם לא ממש רציתי לבחור רק באחד. חיי המקצועיים עברו מאוחר יותר להיי-טק: תכנות, עבודה עם נתונים ואנליטיקה. אך האמנות תמיד נשארה קרובה. המשכתי לצייר, לצבוע ולנסות טכניקות חדשות: אקוורל, שמן, אקריל, בטיק קר וחם, פסטל ועטי פינליינר. יש אנשים שאוספים בולים. אני נראה שאספתי טכניקות אמנות."
+            "text": "הסיפור שלי התחיל בשני עולמות במקביל: מתמטיקה ואמנות. בילדותי למדתי בכיתה עם דגש על מתמטיקה, ובאותו זמן למדתי בבית ספר לאמנות, שם למדתי ציור. מצד אחד נוסחאות והיגיון, ומצד שני צבע, קומפוזיציה ורישום. מעולם לא רציתי לבחור רק באחד מהם. בהמשך הובילו אותי חיי המקצועיים להיי-טק, לתכנות ולניתוח נתונים, אבל המשכתי לצייר ולהתנסות בצבעי מים, שמן, אקריליק, בטיק, פסטל ועטי רישום. האמנות תמיד נשארה חלק מחיי."
           },
           {
-            "title": "חזרה לעיצוב",
-            "text": "אחרי שנים רבות של קוד, לוגיקה ואנליטיקה, הרגשתי יותר ויותר בבירור שאני רוצה לחזור למה שאני באמת אוהב/ת: עיצוב גרפי, ציור והוראה. מאוחר יותר סיימתי את Tzedek Design Academy בעיצוב גרפי ושיווק דיגיטלי. שם הבנתי לחלוטין שעיצוב אינו רק יופי. זו דרך לעזור לעסק להביע את עצמו בצורה ברורה יותר, לתקשר בכוונה ולפתור בעיות אמיתיות."
+            "title": "לחלוק את האמנות בסדנאות",
+            "text": "כשחזרתי להקדיש יותר זמן לאמנות, ההוראה הפכה לחלק חשוב בחיי היצירה שלי. הנחיתי סדנאות לקבוצות קטנות בזנטנגל ובשילוב אישי של Neuro-Art ודודלינג. רציתי לאפשר לאנשים להאט, להתנסות וליהנות מעצם תהליך היצירה, בלי לחץ. זו הייתה הזדמנות משמעותית לחלוק את מה שלמדתי. עם הזמן הרגשתי רצון הולך וגובר להקדיש יותר מהאנרגיה היצירתית שלי לעבודות האישיות שלי."
           },
           {
-            "title": "הוראה ותחושת בית",
-            "text": "עם הזמן, ההוראה הפכה לחלק חשוב נוסף בדרכי. במהלך השנה האחרונה הובלתי מספר סדנאות לקבוצות קטנות, ולימדתי Zentangle וגם את השילוב שלי של טכניקות Neuro-Art ודודל. תרגולים יצירתיים אלה עוזרים לאנשים להאט, להפחית מתח ולהתחבר מחדש לתחושת הרמוניה פנימית — דבר בעל ערך מיוחד במציאות קשה. וכן, אני עדיין ממשיכ/ת לצייר. אני ממשיכ/ת לחקור כלים, מרקמים ורעיונות חדשים, ואני נהנה/ת מכל שלב של התהליך הזה. אחרי כל אותן שנות עבודה, אחריות ואנליזה, החזרה לאמנות לא הרגישה כמו התחלה מאפס. זה הרגיש יותר כמו חזרה הביתה."
+            "title": "המיקוד החדש: יצירות מקוריות והזמנות אישיות",
+            "text": "כיום אני מתמקדת ביצירת עבודות אמנות מקוריות ועבודות בהזמנה אישית. שתי טכניקות הפכו למרכזיות בעשייה שלי: הדפסי Gelli Plate וקולאז׳. ההדפסים מאפשרים לי לחקור שכבות, מרקמים, סימנים בלתי צפויים ושילובי צבעים מפתיעים; הקולאז׳ מאפשר לי לחבר את החלקים המודפסים לקומפוזיציות חדשות. אני אוהבת את האיזון בין ניסוי חופשי לכוונה מודעת, ואת האפשרות ליצור בכל פעם עבודה ייחודית. הסדנאות עדיין חלק משמעותי מהמסע שלי, אך כעת עיקר תשומת הלב שלי מוקדש ליצירה אישית ולעבודות מיוחדות עבור אחרים."
           }
         ]
       },

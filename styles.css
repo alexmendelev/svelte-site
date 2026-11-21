@@ -1290,3 +1290,32 @@ body[data-lang="he"] .lang-link {
   .artwork-row__copy { font-size: .86rem; }
   .cart-item { flex-wrap: wrap; }
 }
+
+
+/* Let each compact catalog row grow to its thumbnail's natural aspect ratio. */
+.artwork-row {
+  height: auto;
+  min-height: 0;
+  align-items: center;
+}
+.artwork-row__thumb {
+  width: 94px;
+  height: auto;
+  flex: 0 0 94px;
+  display: block;
+}
+.artwork-row__thumb img,
+.artwork-row__thumb video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+@media (max-width: 520px) {
+  .artwork-row__thumb {
+    width: 70px;
+    height: auto;
+    flex-basis: 70px;
+  }
+}

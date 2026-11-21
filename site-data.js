@@ -707,7 +707,7 @@ window.SITE_DATA = {
         },
         {
           "title": "Original Art and Commissions",
-          "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct. Workshops remain a meaningful part of my journey, but creating art—and developing personal work for others—is where my attention is now."
+          "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct."
         },
         {
           "title": "Sharing Art Through Workshops",

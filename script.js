@@ -838,31 +838,36 @@ const galleryShopText = (name, fallback) => getStaticText("galleryShop." + name,
 const artworkInfo = (section, file) => {
   const path = getFilePath(file);
   const record = typeof file === "object" && file !== null ? file : {};
+  const status = String(record.status || "available").trim().toLowerCase();
   return {
     id: pageKey + ":" + section.id + ":" + path,
     title: record.title || formatFileName(path),
     src: section.basePath + "/" + path,
-    size: record.size || galleryShopText("sizeUnknown", "Size not specified"),
-    price: record.price || galleryShopText("priceUnknown", "Price not set"),
-    description: record.description || galleryShopText("descriptionUnknown", "Description coming soon")
+    size: record.size || "",
+    price: record.price || "",
+    description: record.description || "",
+    status: status === "sold" ? "sold" : "available"
   };
 };
-const galleryDetailLine = (item) => [item.size, item.price, item.description].join(", ");
+const artworkStatusLabel = (status) =>
+  galleryShopText(status === "sold" ? "sold" : "available", status === "sold" ? "SOLD" : "Available");
 const renderGalleryShop = (root, section) => {
   let selectedIndex = 0;
   const items = section.files.map((file) => artworkInfo(section, file));
+  const featured = document.createElement("div");
+  featured.className = "artwork-feature";
+  const list = document.createElement("div");
+  list.className = "artwork-list";
+  const rows = [];
 
-  const redraw = () => {
-    const selected = items[selectedIndex];
-    root.replaceChildren();
-
-    const featured = document.createElement("div");
-    featured.className = "artwork-feature";
+  const selectArtwork = (index) => {
+    selectedIndex = index;
+    const selected = items[index];
+    featured.replaceChildren();
 
     const frame = document.createElement("div");
     frame.className = "artwork-feature__media";
-    const art = createMediaElement(selected.src, selected.title);
-    frame.append(art);
+    frame.append(createMediaElement(selected.src, selected.title));
     attachLightboxTrigger(frame, selected.src, selected.title);
 
     const details = document.createElement("div");
@@ -870,10 +875,12 @@ const renderGalleryShop = (root, section) => {
     const heading = document.createElement("h3");
     heading.textContent = selected.title;
     details.append(heading);
+
     for (const [label, value] of [
       [galleryShopText("size", "Size"), selected.size],
       [galleryShopText("price", "Price"), selected.price],
-      [galleryShopText("description", "Description"), selected.description]
+      [galleryShopText("description", "Description"), selected.description],
+      [galleryShopText("status", "Status"), artworkStatusLabel(selected.status)]
     ]) {
       const block = document.createElement("div");
       block.className = "artwork-spec";
@@ -890,55 +897,55 @@ const renderGalleryShop = (root, section) => {
     collect.className = "artwork-collect";
     const isCollected = () => window.SVETA_CART.getItems().some((item) => item.id === selected.id);
     const updateCollect = () => {
+      const sold = selected.status === "sold";
       const added = isCollected();
-      collect.textContent = galleryShopText(added ? "collected" : "collect", added ? "In Cart" : "Collect");
-      collect.disabled = added;
+      collect.textContent = sold
+        ? galleryShopText("sold", "SOLD")
+        : galleryShopText(added ? "collected" : "collect", added ? "In Cart" : "Collect");
+      collect.disabled = sold || added;
     };
     updateCollect();
     collect.addEventListener("click", () => {
-      window.SVETA_CART.addItem(selected);
-      updateCollect();
+      if (selected.status !== "sold") {
+        window.SVETA_CART.addItem(selected);
+        updateCollect();
+      }
     });
     details.append(collect);
     featured.append(frame, details);
-    root.append(featured);
 
-    if (items.length > 1) {
-      const list = document.createElement("div");
-      list.className = "artwork-list";
-      const listHeading = document.createElement("h3");
-      listHeading.className = "artwork-list__heading";
-      listHeading.textContent = galleryShopText("more", "More from this collection");
-      list.append(listHeading);
-      items.forEach((item, i) => {
-        if (i === selectedIndex) return;
-        const row = document.createElement("button");
-        row.type = "button";
-        row.className = "artwork-row";
-        const imageHolder = document.createElement("span");
-        imageHolder.className = "artwork-row__thumb";
-        const image = createMediaElement(item.src, item.title);
-        if (image.tagName === "VIDEO") image.controls = false;
-        imageHolder.append(image);
-        const text = document.createElement("span");
-        text.className = "artwork-row__copy";
-        const name = document.createElement("strong");
-        name.textContent = item.title;
-        const values = document.createElement("span");
-        values.textContent = galleryDetailLine(item);
-        text.append(name, values);
-        row.append(imageHolder, text);
-        row.addEventListener("click", () => {
-          selectedIndex = i;
-          redraw();
-          featured.scrollIntoView({block: "nearest", behavior: "auto"});
-        });
-        list.append(row);
-      });
-      root.append(list);
-    }
+    rows.forEach((row, i) => {
+      row.classList.toggle("is-selected", i === selectedIndex);
+      row.setAttribute("aria-pressed", String(i === selectedIndex));
+    });
   };
-  redraw();
+
+  items.forEach((item, i) => {
+    const row = document.createElement("button");
+    row.type = "button";
+    row.className = "artwork-row";
+    const imageHolder = document.createElement("span");
+    imageHolder.className = "artwork-row__thumb";
+    const image = createMediaElement(item.src, item.title);
+    if (image.tagName === "VIDEO") image.controls = false;
+    imageHolder.append(image);
+    const copy = document.createElement("span");
+    copy.className = "artwork-row__copy";
+    const name = document.createElement("strong");
+    name.textContent = item.title + ", " + artworkStatusLabel(item.status);
+    copy.append(name);
+    row.append(imageHolder, copy);
+    row.addEventListener("click", () => selectArtwork(i));
+    rows.push(row);
+    list.append(row);
+  });
+
+  root.append(featured);
+  const listHeading = document.createElement("h3");
+  listHeading.className = "artwork-list__heading";
+  listHeading.textContent = galleryShopText("more", "Collection");
+  root.append(listHeading, list);
+  selectArtwork(0);
 };
 
 const renderDetailPage = () => {
@@ -1035,10 +1042,7 @@ const renderDetailPage = () => {
     const titleNode = document.createElement("h2");
     titleNode.textContent = section.title;
 
-    const note = document.createElement("p");
-    note.textContent = section.note;
-
-    heading.append(eyebrow, titleNode, note);
+    heading.append(eyebrow, titleNode);
 
     const grid = document.createElement("div");
     grid.className = "gallery-shop";
@@ -1096,7 +1100,7 @@ const renderCart = () => {
     name.textContent = item.title;
     detail.append(name);
     const values = document.createElement("span");
-    values.textContent = [item.size, item.price, item.description].filter(Boolean).join(", ");
+    values.textContent = [item.size, item.price, item.description, item.status ? artworkStatusLabel(item.status) : ""].filter(Boolean).join(", ");
     detail.append(values);
     row.append(detail);
     const remove = document.createElement("button");
@@ -1107,6 +1111,7 @@ const renderCart = () => {
       renderCart();
     });
     row.append(remove);
+    list.append(row);
   });
 };
 const applyCartPage = () => {
@@ -1123,7 +1128,7 @@ window.SVETA_CART = {
   addItem: (item) => {
     if (!item || typeof item.id !== "string" || typeof item.title !== "string") return false;
     const items = readCart();
-    if (!items.some((entry) => entry.id === item.id)) items.push({id: item.id, title: item.title, src: item.src, size: item.size, price: item.price, description: item.description});
+    if (!items.some((entry) => entry.id === item.id)) items.push({id: item.id, title: item.title, src: item.src, size: item.size, price: item.price, description: item.description, status: item.status});
     saveCart(items);
     renderCart();
     return true;

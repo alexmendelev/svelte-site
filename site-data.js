@@ -416,11 +416,11 @@ window.SITE_DATA = {
     },
     "original-art": {
       "file": "original-art.html",
-      "navLabel": "Original Art",
-      "menuLabel": "Original Art",
+      "navLabel": "Paintings Archive",
+      "menuLabel": "Paintings Archive",
       "heroKicker": "Original pieces shaped by texture, rhythm, color, and stillness.",
-      "heroTitle": "Original Art Works",
-      "summary": "A growing collection of doodle art, geometric compositions, and watercolor work created to bring warmth, wonder, and calm into everyday spaces.",
+      "heroTitle": "Paintings Archive",
+      "summary": "Explore a selection of past original works, from doodle art and watercolor to geometric compositions. This archive preserves the creative journey behind the studio.",
       "folderLabel": "OriginalArt",
       "heroArtwork": [
         {
@@ -729,14 +729,14 @@ window.SITE_DATA = {
     },
     "shop": {
       "file": "shop.html",
-      "navLabel": "Shop",
-      "menuLabel": "Shop",
+      "navLabel": "Collect Art",
+      "menuLabel": "Collect Art",
       "heroKicker": "Something new is taking shape.",
-      "heroTitle": "Shop",
-      "summary": "A curated selection of original artwork and creative pieces is on its way. The shop is under construction — please check back soon.",
+      "heroTitle": "Collect Art",
+      "summary": "A collection of original artworks to explore and collect is on its way. This page is under construction — please check back soon.",
       "panels": [],
       "sections": [],
-      "cardSummary": "Discover original artwork and creative pieces selected for bringing character and warmth into your space. Our shop is coming soon.",
+      "cardSummary": "Explore original artwork and one-of-a-kind pieces to bring color, character, and warmth into your space. Collect Art is coming soon.",
       "cardMeta": "Coming soon"
     }
   }

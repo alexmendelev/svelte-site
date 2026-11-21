@@ -129,6 +129,9 @@ const getLocalizedPage = (key = pageKey, lang = currentLanguage) => {
 };
 
 const getPageNavLabel = (key, lang = currentLanguage) => {
+  if (key === "cart") {
+    return getStaticText("nav.cart", "Cart", lang);
+  }
   if (key === "home") {
     return getStaticText("nav.home", "Home", lang);
   }
@@ -579,7 +582,12 @@ const buildSiteNav = () => {
   navLinks.forEach((link) => {
     const targetKey = link.dataset.navPage;
     link.classList.toggle("is-current", targetKey === pageKey);
-    link.textContent = getPageNavLabel(targetKey);
+    if (targetKey === "cart") {
+      const word = link.querySelector(".cart-word");
+      if (word) word.textContent = getPageNavLabel(targetKey);
+    } else {
+      link.textContent = getPageNavLabel(targetKey);
+    }
     link.href = getPageHref(link.getAttribute("href") || `${targetKey}.html`);
   });
 };
@@ -695,6 +703,7 @@ const applySharedTranslations = () => {
   }
 
   buildSiteNav();
+  renderCart();
   updateLanguageSelector();
   updateDocumentMetadata();
   syncLightboxStrings();
@@ -958,6 +967,69 @@ const renderDetailPage = () => {
   sectionsRoot.append(sectionFragment);
 };
 
+// Cart storage is prepared for future Collect Art listings; no purchase or checkout flow is active.
+const cartStorageKey = "sveta-mendelev-cart";
+const readCart = () => {
+  try {
+    const items = JSON.parse(window.localStorage.getItem(cartStorageKey) || "[]");
+    return Array.isArray(items) ? items.filter((item) => item && typeof item.id === "string" && typeof item.title === "string") : [];
+  } catch {
+    return [];
+  }
+};
+const saveCart = (items) => {
+  try { window.localStorage.setItem(cartStorageKey, JSON.stringify(items)); } catch { /* Storage can be unavailable. */ }
+};
+const renderCart = () => {
+  const items = readCart();
+  const counter = document.querySelector("#cart-count");
+  const cartLink = document.querySelector(".cart-nav-link");
+  if (counter) counter.textContent = String(items.length);
+  if (cartLink) cartLink.setAttribute("aria-label", getPageNavLabel("cart") + ", " + items.length);
+  const list = document.querySelector("#cart-items");
+  const empty = document.querySelector("#cart-empty");
+  if (!list) return;
+  list.replaceChildren();
+  if (empty) empty.hidden = items.length > 0;
+  items.forEach((item) => {
+    const row = document.createElement("li");
+    row.className = "cart-item";
+    const name = document.createElement("span");
+    name.textContent = item.title;
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.textContent = getStaticText("cart.remove", "Remove");
+    remove.addEventListener("click", () => {
+      saveCart(readCart().filter((entry) => entry.id !== item.id));
+      renderCart();
+    });
+    row.append(name, remove);
+    list.append(row);
+  });
+};
+const applyCartPage = () => {
+  setText("#page-kicker", getStaticText("cart.title", "Your Cart"));
+  setText("#page-title", getStaticText("cart.title", "Your Cart"));
+  setText("#page-summary", getStaticText("cart.summary", ""));
+  setText("#cart-empty-title", getStaticText("cart.empty", "Your cart is empty."));
+  setText("#cart-empty-detail", getStaticText("cart.emptyDetails", ""));
+  document.title = getStaticText("cart.title", "Your Cart") + " | " + getStaticText("brandName", "Sveta Mendelev");
+  renderCart();
+};
+window.SVETA_CART = {
+  getItems: () => readCart(),
+  addItem: (item) => {
+    if (!item || typeof item.id !== "string" || typeof item.title !== "string") return false;
+    const items = readCart();
+    if (!items.some((entry) => entry.id === item.id)) items.push({id: item.id, title: item.title});
+    saveCart(items);
+    renderCart();
+    return true;
+  },
+  removeItem: (id) => { saveCart(readCart().filter((item) => item.id !== id)); renderCart(); }
+};
+window.addEventListener("storage", (event) => { if (event.key === cartStorageKey) renderCart(); });
+
 const applyLanguage = () => {
   applySharedTranslations();
 
@@ -969,6 +1041,7 @@ const applyLanguage = () => {
     renderDetailPage();
     applyContactStaticTranslations();
   }
+  if (pageKey === "cart") applyCartPage();
 
   syncInternalLanguageLinks();
 };

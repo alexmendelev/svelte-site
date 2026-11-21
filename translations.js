@@ -7,11 +7,11 @@ window.SITE_TRANSLATIONS = {
   ],
   "static": {
     "en": {
-      "brandName": "Svelte Design Studio",
-      "brandAriaLabel": "Svelte Design Studio home",
-      "logoAlt": "Svelte Design Studio logo",
+      "brandName": "Sveta Mendelev",
+      "brandAriaLabel": "Sveta Mendelev home",
+      "logoAlt": "Sveta Mendelev logo",
       "menuToggleAria": "Open navigation",
-      "footer": "© Svelte Design Studio. Art, design, and quiet joy.",
+      "footer": "© Sveta Mendelev. Art, design, and quiet joy.",
       "nav": {
         "home": "Home",
         "graphic-design-and-digital-marketing": "Graphic Design",
@@ -32,10 +32,10 @@ window.SITE_TRANSLATIONS = {
         "emptyCollection": "This collection is resting between new works."
       },
       "home": {
-        "documentTitle": "Svelte Design Studio",
-        "metaDescription": "Mindful workshops, original art, and graphic design by Svelte Design Studio.",
+        "documentTitle": "Sveta Mendelev",
+        "metaDescription": "Mindful workshops, original art, and graphic design by Sveta Mendelev.",
         "heroEyebrow": "Art, design, and workshops created with calm hands and an open heart.",
-        "heroTitle": "Svelte Design Studio",
+        "heroTitle": "Sveta Mendelev",
         "lead": "Explore mindful workshops, original art, and visual design created to feel warm, clear, and quietly memorable.",
         "ctaLabel": "Send a WhatsApp message",
         "ctaMessage": "Hello, I am interested in more details about your services.",
@@ -103,14 +103,15 @@ window.SITE_TRANSLATIONS = {
         "mailSubject": "Contact Request",
         "mailBody": "Hello, I am interested in more details about your services.",
         "whatsappMessage": "Hello, I am interested in more details about your services."
-      }
+      },
+      "brandTagline": "Art · Original Works · Workshops"
     },
     "ru": {
-      "brandName": "Svelte Design Studio",
-      "brandAriaLabel": "Главная страница Svelte Design Studio",
-      "logoAlt": "Логотип Svelte Design Studio",
+      "brandName": "Sveta Mendelev",
+      "brandAriaLabel": "Главная страница Sveta Mendelev",
+      "logoAlt": "Логотип Sveta Mendelev",
       "menuToggleAria": "Открыть меню",
-      "footer": "© Svelte Design Studio. Дизайн, авторские работы, мастер-классы.",
+      "footer": "© Sveta Mendelev. Дизайн, авторские работы, мастер-классы.",
       "nav": {
         "home": "Главная",
         "graphic-design-and-digital-marketing": "Графический дизайн",
@@ -131,10 +132,10 @@ window.SITE_TRANSLATIONS = {
         "emptyCollection": "В этой коллекции скоро появятся новые работы."
       },
       "home": {
-        "documentTitle": "Svelte Design Studio",
-        "metaDescription": "Мастер-классы, авторские работы и графический дизайн от Svelte Design Studio.",
+        "documentTitle": "Sveta Mendelev",
+        "metaDescription": "Мастер-классы, авторские работы и графический дизайн от Sveta Mendelev.",
         "heroEyebrow": "Искусство, дизайн и мастер-классы, созданные с вниманием, вкусом и открытым сердцем.",
-        "heroTitle": "Svelte Design Studio",
+        "heroTitle": "Sveta Mendelev",
         "lead": "Авторские работы, мастер-классы и визуальные решения для брендов — ясные и запоминающиеся.",
         "ctaLabel": "Написать в WhatsApp",
         "ctaMessage": "Здравствуйте, мне хотелось бы узнать подробнее о ваших услугах.",
@@ -202,14 +203,15 @@ window.SITE_TRANSLATIONS = {
         "mailSubject": "Запрос на связь",
         "mailBody": "Здравствуйте, мне хотелось бы узнать подробнее о ваших услугах.",
         "whatsappMessage": "Здравствуйте, мне хотелось бы узнать подробнее о ваших услугах."
-      }
+      },
+      "brandTagline": "Искусство · Авторские работы · Мастер-классы"
     },
     "he": {
-      "brandName": "Svelte Design Studio",
-      "brandAriaLabel": "דף הבית של Svelte Design Studio",
-      "logoAlt": "לוגו Svelte Design Studio",
+      "brandName": "Sveta Mendelev",
+      "brandAriaLabel": "דף הבית של Sveta Mendelev",
+      "logoAlt": "לוגו Sveta Mendelev",
       "menuToggleAria": "פתח תפריט",
-      "footer": "© Svelte Design Studio. אמנות, עיצוב ושמחה שקטה.",
+      "footer": "© Sveta Mendelev. אמנות, עיצוב ושמחה שקטה.",
       "nav": {
         "home": "ראשי",
         "graphic-design-and-digital-marketing": "עיצוב גרפי",
@@ -230,10 +232,10 @@ window.SITE_TRANSLATIONS = {
         "emptyCollection": "האוסף הזה נח בין יצירות חדשות."
       },
       "home": {
-        "documentTitle": "Svelte Design Studio",
-        "metaDescription": "סדנאות מודעות, אמנות מקורית ועיצוב גרפי מבית Svelte Design Studio.",
+        "documentTitle": "Sveta Mendelev",
+        "metaDescription": "סדנאות מודעות, אמנות מקורית ועיצוב גרפי מבית Sveta Mendelev.",
         "heroEyebrow": "אמנות, עיצוב וסדנאות שנוצרו בידיים רגועות ולב פתוח.",
-        "heroTitle": "Svelte Design Studio",
+        "heroTitle": "Sveta Mendelev",
         "lead": "גלו סדנאות מודעות, אמנות מקורית ועיצוב ויזואלי שנוצר להרגיש חמים, בהיר ובלתי נשכח.",
         "ctaLabel": "שלחו הודעת WhatsApp",
         "ctaMessage": "שלום, אני מעוניין/ת לקבל פרטים נוספים על השירותים שלך.",
@@ -301,7 +303,8 @@ window.SITE_TRANSLATIONS = {
         "mailSubject": "פנייה ליצירת קשר",
         "mailBody": "שלום, אני מעוניין/ת לקבל פרטים נוספים על השירותים שלך.",
         "whatsappMessage": "שלום, אני מעוניין/ת לקבל פרטים נוספים על השירותים שלך."
-      }
+      },
+      "brandTagline": "אמנות · יצירות מקוריות · סדנאות"
     }
   },
   "pages": {

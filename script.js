@@ -210,7 +210,7 @@ const updateDocumentMetadata = () => {
   const metaDescription = document.querySelector('meta[name="description"]');
 
   if (pageKey === "home") {
-    document.title = getStaticText("home.documentTitle", "Svelte Design Studio");
+    document.title = getStaticText("home.documentTitle", "Sveta Mendelev");
     if (metaDescription) {
       metaDescription.setAttribute("content", getStaticText("home.metaDescription", ""));
     }
@@ -222,7 +222,7 @@ const updateDocumentMetadata = () => {
     return;
   }
 
-  document.title = `${page.menuLabel} | ${getStaticText("brandName", "Svelte Design Studio")}`;
+  document.title = `${page.menuLabel} | ${getStaticText("brandName", "Sveta Mendelev")}`;
   if (metaDescription) {
     metaDescription.setAttribute("content", page.summary);
   }
@@ -667,7 +667,7 @@ const applySharedTranslations = () => {
 
   const brand = document.querySelector(".brand");
   if (brand) {
-    brand.setAttribute("aria-label", getStaticText("brandAriaLabel", "Svelte Design Studio home"));
+    brand.setAttribute("aria-label", getStaticText("brandAriaLabel", "Sveta Mendelev home"));
   }
 
   const brandImage = document.querySelector(".brand img");
@@ -675,9 +675,14 @@ const applySharedTranslations = () => {
     brandImage.alt = getStaticText("logoAlt", brandImage.alt);
   }
 
-  const brandText = document.querySelector(".brand span");
+  const brandText = document.querySelector(".brand-name");
   if (brandText) {
     brandText.textContent = getStaticText("brandName", brandText.textContent);
+  }
+
+  const brandTagline = document.querySelector(".brand-tagline");
+  if (brandTagline) {
+    brandTagline.textContent = getStaticText("brandTagline", brandTagline.textContent);
   }
 
   if (menuToggle) {
@@ -701,7 +706,7 @@ const applyHomeStaticTranslations = () => {
   }
 
   setText("#home-hero-eyebrow", getStaticText("home.heroEyebrow", ""));
-  setText("#home-title", getStaticText("home.heroTitle", "Svelte Design Studio"));
+  setText("#home-title", getStaticText("home.heroTitle", "Sveta Mendelev"));
   setText("#home-lead", getStaticText("home.lead", ""));
   setText("#home-section-eyebrow", getStaticText("home.sectionEyebrow", ""));
   setText("#home-section-title", getStaticText("home.sectionTitle", ""));

@@ -397,7 +397,7 @@ window.SITE_TRANSLATIONS = {
           },
           {
             "title": "Original Art and Commissions",
-            "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct. Workshops remain a meaningful part of my journey, but creating art—and developing personal work for others—is where my attention is now."
+            "text": "Today I am concentrating on original artworks and commissioned pieces. Two techniques have become central to my practice: Gelli Plate printing and collage. Gelli Plate printing lets me explore layers, textures, unexpected marks, and the surprises of color; collage gives me a way to bring those printed fragments together into new compositions. I enjoy the balance between experimentation and intention, and the freedom to make each piece distinct."
           },
           {
             "title": "Sharing Art Through Workshops",
@@ -513,7 +513,7 @@ window.SITE_TRANSLATIONS = {
           },
           {
             "title": "Авторские работы и заказы",
-            "text": "Сегодня я сосредоточена на создании оригинальных произведений и работ на заказ. Особенно увлекли меня две техники: печать на Gelli Plate и коллаж. Gelli Plate позволяет экспериментировать со слоями, фактурами, отпечатками и неожиданными сочетаниями цвета; коллаж помогает соединять эти элементы в новые композиции. Мне нравится сочетание свободы эксперимента и продуманного замысла, благодаря которому каждая работа получается особенной. Мастер-классы остаются важной частью моего пути, но сейчас главное для меня — создавать собственное искусство и индивидуальные работы для других."
+            "text": "Сегодня я сосредоточена на создании оригинальных произведений и работ на заказ. Особенно увлекли меня две техники: печать на Gelli Plate и коллаж. Gelli Plate позволяет экспериментировать со слоями, фактурами, отпечатками и неожиданными сочетаниями цвета; коллаж помогает соединять эти элементы в новые композиции. Мне нравится сочетание свободы эксперимента и продуманного замысла, благодаря которому каждая работа получается особенной."
           },
           {
             "title": "От творчества к мастер-классам",
@@ -629,7 +629,7 @@ window.SITE_TRANSLATIONS = {
           },
           {
             "title": "יצירות מקוריות והזמנות אישיות",
-            "text": "כיום אני מתמקדת ביצירת עבודות אמנות מקוריות ועבודות בהזמנה אישית. שתי טכניקות הפכו למרכזיות בעשייה שלי: הדפסי Gelli Plate וקולאז׳. ההדפסים מאפשרים לי לחקור שכבות, מרקמים, סימנים בלתי צפויים ושילובי צבעים מפתיעים; הקולאז׳ מאפשר לי לחבר את החלקים המודפסים לקומפוזיציות חדשות. אני אוהבת את האיזון בין ניסוי חופשי לכוונה מודעת, ואת האפשרות ליצור בכל פעם עבודה ייחודית. הסדנאות עדיין חלק משמעותי מהמסע שלי, אך כעת עיקר תשומת הלב שלי מוקדש ליצירה אישית ולעבודות מיוחדות עבור אחרים."
+            "text": "כיום אני מתמקדת ביצירת עבודות אמנות מקוריות ועבודות בהזמנה אישית. שתי טכניקות הפכו למרכזיות בעשייה שלי: הדפסי Gelli Plate וקולאז׳. ההדפסים מאפשרים לי לחקור שכבות, מרקמים, סימנים בלתי צפויים ושילובי צבעים מפתיעים; הקולאז׳ מאפשר לי לחבר את החלקים המודפסים לקומפוזיציות חדשות. אני אוהבת את האיזון בין ניסוי חופשי לכוונה מודעת, ואת האפשרות ליצור בכל פעם עבודה ייחודית."
           },
           {
             "title": "לחלוק את האמנות בסדנאות",

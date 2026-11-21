@@ -852,35 +852,24 @@ const artworkInfo = (section, file) => {
 const artworkStatusLabel = (status) =>
   galleryShopText(status === "sold" ? "sold" : "available", status === "sold" ? "SOLD" : "Available");
 const renderGalleryShop = (root, section) => {
-  let selectedIndex = 0;
   const items = section.files.map((file) => artworkInfo(section, file));
-  const featured = document.createElement("div");
-  featured.className = "artwork-feature";
+  const rows = [];
   const list = document.createElement("div");
   list.className = "artwork-list";
-  const rows = [];
 
-  const selectArtwork = (index) => {
-    selectedIndex = index;
-    const selected = items[index];
-    featured.replaceChildren();
-
-    const frame = document.createElement("div");
-    frame.className = "artwork-feature__media";
-    frame.append(createMediaElement(selected.src, selected.title));
-    attachLightboxTrigger(frame, selected.src, selected.title);
-
+  const makeDetails = (item) => {
     const details = document.createElement("div");
     details.className = "artwork-feature__details";
+
     const heading = document.createElement("h3");
-    heading.textContent = selected.title;
+    heading.textContent = item.title;
     details.append(heading);
 
     for (const [label, value] of [
-      [galleryShopText("size", "Size"), selected.size],
-      [galleryShopText("price", "Price"), selected.price],
-      [galleryShopText("description", "Description"), selected.description],
-      [galleryShopText("status", "Status"), artworkStatusLabel(selected.status)]
+      [galleryShopText("size", "Size"), item.size],
+      [galleryShopText("price", "Price"), item.price],
+      [galleryShopText("description", "Description"), item.description],
+      [galleryShopText("status", "Status"), artworkStatusLabel(item.status)]
     ]) {
       const block = document.createElement("div");
       block.className = "artwork-spec";
@@ -895,10 +884,9 @@ const renderGalleryShop = (root, section) => {
     const collect = document.createElement("button");
     collect.type = "button";
     collect.className = "artwork-collect";
-    const isCollected = () => window.SVETA_CART.getItems().some((item) => item.id === selected.id);
     const updateCollect = () => {
-      const sold = selected.status === "sold";
-      const added = isCollected();
+      const sold = item.status === "sold";
+      const added = window.SVETA_CART.getItems().some((entry) => entry.id === item.id);
       collect.textContent = sold
         ? galleryShopText("sold", "SOLD")
         : galleryShopText(added ? "collected" : "collect", added ? "In Cart" : "Collect");
@@ -906,45 +894,61 @@ const renderGalleryShop = (root, section) => {
     };
     updateCollect();
     collect.addEventListener("click", () => {
-      if (selected.status !== "sold") {
-        window.SVETA_CART.addItem(selected);
+      if (item.status !== "sold") {
+        window.SVETA_CART.addItem(item);
         updateCollect();
       }
     });
     details.append(collect);
-    featured.append(frame, details);
+    return details;
+  };
 
-    rows.forEach((row, i) => {
-      row.classList.toggle("is-selected", i === selectedIndex);
-      row.setAttribute("aria-pressed", String(i === selectedIndex));
+  const selectArtwork = (index) => {
+    rows.forEach(({ row, button, detail }, i) => {
+      const selected = i === index;
+      row.classList.toggle("is-selected", selected);
+      button.setAttribute("aria-expanded", String(selected));
+      if (selected) {
+        detail.replaceChildren(makeDetails(items[i]));
+        detail.hidden = false;
+      } else {
+        detail.hidden = true;
+        detail.replaceChildren();
+      }
     });
   };
 
   items.forEach((item, i) => {
-    const row = document.createElement("button");
-    row.type = "button";
+    const row = document.createElement("article");
     row.className = "artwork-row";
+    const selectButton = document.createElement("button");
+    selectButton.type = "button";
+    selectButton.className = "artwork-row__select";
+
     const imageHolder = document.createElement("span");
     imageHolder.className = "artwork-row__thumb";
     const image = createMediaElement(item.src, item.title);
     if (image.tagName === "VIDEO") image.controls = false;
     imageHolder.append(image);
+
     const copy = document.createElement("span");
     copy.className = "artwork-row__copy";
-    const name = document.createElement("strong");
-    name.textContent = item.title + ", " + artworkStatusLabel(item.status);
-    copy.append(name);
-    row.append(imageHolder, copy);
-    row.addEventListener("click", () => selectArtwork(i));
-    rows.push(row);
+    const label = document.createElement("strong");
+    label.textContent = item.title + ", " + artworkStatusLabel(item.status);
+    copy.append(label);
+
+    selectButton.append(imageHolder, copy);
+    selectButton.addEventListener("click", () => selectArtwork(i));
+
+    const detail = document.createElement("div");
+    detail.className = "artwork-row__detail";
+    detail.hidden = true;
+    row.append(selectButton, detail);
+    rows.push({ row, button: selectButton, detail });
     list.append(row);
   });
 
-  root.append(featured);
-  const listHeading = document.createElement("h3");
-  listHeading.className = "artwork-list__heading";
-  listHeading.textContent = galleryShopText("more", "Collection");
-  root.append(listHeading, list);
+  root.append(list);
   selectArtwork(0);
 };
 

@@ -16,10 +16,11 @@ window.SITE_TRANSLATIONS = {
         "home": "Home",
         "graphic-design-and-digital-marketing": "Graphic Design",
         "master-classes": "Master Classes",
-        "original-art": "Original Art",
+        "original-art": "Paintings Archive",
         "my-journey": "My Journey",
         "contact-me": "Contact Me",
-        "shop": "Shop"
+        "shop": "Collect Art",
+        "cart": "Cart"
       },
       "language": {
         "unavailable": "Coming soon"
@@ -104,7 +105,14 @@ window.SITE_TRANSLATIONS = {
         "mailBody": "Hello, I am interested in more details about your services.",
         "whatsappMessage": "Hello, I am interested in more details about your services."
       },
-      "brandTagline": "Art · Original Works · Workshops"
+      "brandTagline": "Art · Original Works · Workshops",
+      "cart": {
+        "title": "Your Cart",
+        "empty": "Your cart is empty.",
+        "emptyDetails": "When artworks become available to collect, you’ll be able to keep your selections here.",
+        "summary": "Your selected artworks will appear here. Online checkout is not available yet.",
+        "remove": "Remove"
+      }
     },
     "ru": {
       "brandName": "Sveta Mendelev",
@@ -116,10 +124,11 @@ window.SITE_TRANSLATIONS = {
         "home": "Главная",
         "graphic-design-and-digital-marketing": "Графический дизайн",
         "master-classes": "Мастер-классы",
-        "original-art": "Авторские работы",
+        "original-art": "Архив картин",
         "my-journey": "Мой путь",
         "contact-me": "Контакты",
-        "shop": "Магазин"
+        "shop": "Выбрать искусство",
+        "cart": "Корзина"
       },
       "language": {
         "unavailable": "Скоро появится"
@@ -204,7 +213,14 @@ window.SITE_TRANSLATIONS = {
         "mailBody": "Здравствуйте, мне хотелось бы узнать подробнее о ваших услугах.",
         "whatsappMessage": "Здравствуйте, мне хотелось бы узнать подробнее о ваших услугах."
       },
-      "brandTagline": "Искусство · Авторские работы · Мастер-классы"
+      "brandTagline": "Искусство · Авторские работы · Мастер-классы",
+      "cart": {
+        "title": "Корзина",
+        "empty": "Ваша корзина пуста.",
+        "emptyDetails": "Когда работы станут доступны для приобретения, выбранные произведения будут отображаться здесь.",
+        "summary": "Здесь будут показаны выбранные вами произведения. Онлайн-оплата пока недоступна.",
+        "remove": "Удалить"
+      }
     },
     "he": {
       "brandName": "Sveta Mendelev",
@@ -216,10 +232,11 @@ window.SITE_TRANSLATIONS = {
         "home": "ראשי",
         "graphic-design-and-digital-marketing": "עיצוב גרפי",
         "master-classes": "סדנאות",
-        "original-art": "אמנות מקורית",
+        "original-art": "ארכיון ציורים",
         "my-journey": "הדרך שלי",
         "contact-me": "צור קשר",
-        "shop": "חנות"
+        "shop": "אוספים אמנות",
+        "cart": "סל"
       },
       "language": {
         "unavailable": "בקרוב"
@@ -304,7 +321,14 @@ window.SITE_TRANSLATIONS = {
         "mailBody": "שלום, אני מעוניין/ת לקבל פרטים נוספים על השירותים שלך.",
         "whatsappMessage": "שלום, אני מעוניין/ת לקבל פרטים נוספים על השירותים שלך."
       },
-      "brandTagline": "אמנות · יצירות מקוריות · סדנאות"
+      "brandTagline": "אמנות · יצירות מקוריות · סדנאות",
+      "cart": {
+        "title": "הסל שלי",
+        "empty": "הסל שלך ריק.",
+        "emptyDetails": "כאשר יצירות יהיו זמינות לרכישה, יהיה אפשר לשמור כאן את הבחירות שלך.",
+        "summary": "היצירות שבחרת יופיעו כאן. עדיין אין אפשרות לתשלום מקוון.",
+        "remove": "הסרה"
+      }
     }
   },
   "pages": {
@@ -360,11 +384,11 @@ window.SITE_TRANSLATIONS = {
         ]
       },
       "original-art": {
-        "navLabel": "Original Art",
-        "menuLabel": "Original Art",
+        "navLabel": "Paintings Archive",
+        "menuLabel": "Paintings Archive",
         "heroKicker": "Works shaped by line, color, texture, and mood.",
-        "heroTitle": "Original Art",
-        "summary": "A selection of original works, from doodle art to watercolor and geometric compositions, created to bring warmth, light, and character into a space.",
+        "heroTitle": "Paintings Archive",
+        "summary": "Explore a selection of past original works, from doodle art and watercolor to geometric compositions. This archive preserves the creative journey behind the studio.",
         "sections": [
           {
             "title": "Doodle Art",
@@ -413,14 +437,14 @@ window.SITE_TRANSLATIONS = {
         "summary": "If you would like to get in touch about workshops, design, or original art, you will find my contact details and a simple message form here."
       },
       "shop": {
-        "navLabel": "Shop",
-        "menuLabel": "Shop",
+        "navLabel": "Collect Art",
+        "menuLabel": "Collect Art",
         "heroKicker": "Something new is taking shape.",
-        "heroTitle": "Shop",
-        "summary": "A curated selection of original artwork and creative pieces is on its way. The shop is under construction — please check back soon.",
+        "heroTitle": "Collect Art",
+        "summary": "A collection of original artworks to explore and collect is on its way. This page is under construction — please check back soon.",
         "sections": [],
         "panels": [],
-        "cardSummary": "Discover original artwork and creative pieces selected for bringing character and warmth into your space. Our shop is coming soon.",
+        "cardSummary": "Explore original artwork and one-of-a-kind pieces to bring color, character, and warmth into your space. Collect Art is coming soon.",
         "cardMeta": "Coming soon"
       }
     },
@@ -476,11 +500,11 @@ window.SITE_TRANSLATIONS = {
         ]
       },
       "original-art": {
-        "navLabel": "Авторские работы",
-        "menuLabel": "Авторские работы",
+        "navLabel": "Архив картин",
+        "menuLabel": "Архив картин",
         "heroKicker": "Работы, в которых важны линия, цвет, фактура и настроение.",
-        "heroTitle": "Авторские работы",
-        "summary": "Подборка авторских работ — от дудл-арта до акварели и геометрических композиций, созданных, чтобы приносить в пространство тепло, свет и характер.",
+        "heroTitle": "Архив картин",
+        "summary": "Архив авторских работ: дудл-арт, акварель и геометрические композиции. Здесь собраны произведения разных этапов моего творческого пути.",
         "sections": [
           {
             "title": "Дудл-арт",
@@ -529,14 +553,14 @@ window.SITE_TRANSLATIONS = {
         "summary": "Здесь вы можете связаться со мной по поводу мастер-классов, дизайна или авторских работ, здесь вы найдёте мои контакты и удобную форму для сообщения."
       },
       "shop": {
-        "navLabel": "Магазин",
-        "menuLabel": "Магазин",
+        "navLabel": "Выбрать искусство",
+        "menuLabel": "Выбрать искусство",
         "heroKicker": "Здесь скоро появится что-то новое.",
-        "heroTitle": "Магазин",
-        "summary": "Скоро здесь появятся авторские работы и творческие изделия. Магазин находится в разработке — загляните немного позже.",
+        "heroTitle": "Выбрать искусство",
+        "summary": "Скоро здесь можно будет выбрать авторские произведения искусства. Страница пока находится в разработке.",
         "sections": [],
         "panels": [],
-        "cardSummary": "Авторские работы и творческие изделия, которые добавят вашему пространству характер и тепло. Магазин скоро откроется.",
+        "cardSummary": "Откройте для себя авторские работы, которые добавят вашему дому цвета, характера и тепла. Раздел скоро откроется.",
         "cardMeta": "Скоро открытие"
       }
     },
@@ -592,11 +616,11 @@ window.SITE_TRANSLATIONS = {
         ]
       },
       "original-art": {
-        "navLabel": "אמנות מקורית",
-        "menuLabel": "אמנות מקורית",
+        "navLabel": "ארכיון ציורים",
+        "menuLabel": "ארכיון ציורים",
         "heroKicker": "יצירות שעוצבו בקו, צבע, מרקם ואווירה.",
-        "heroTitle": "אמנות מקורית",
-        "summary": "מבחר יצירות מקוריות, מאמנות דודל ועד אקוורל וקומפוזיציות גיאומטריות, שנוצרו כדי להביא חום, אור ואופי למרחב.",
+        "heroTitle": "ארכיון ציורים",
+        "summary": "ארכיון יצירות מקוריות: דודל, צבעי מים וקומפוזיציות גיאומטריות מתקופות שונות במסע היצירתי שלי.",
         "sections": [
           {
             "title": "אמנות דודל",
@@ -645,14 +669,14 @@ window.SITE_TRANSLATIONS = {
         "summary": "אם תרצו ליצור קשר בנוגע לסדנאות, עיצוב או אמנות מקורית, תמצאו כאן את פרטי הקשר שלי וטופס הודעה פשוט."
       },
       "shop": {
-        "navLabel": "חנות",
-        "menuLabel": "חנות",
+        "navLabel": "אוספים אמנות",
+        "menuLabel": "אוספים אמנות",
         "heroKicker": "משהו חדש מתחיל להיווצר כאן.",
-        "heroTitle": "חנות",
-        "summary": "מבחר יצירות אמנות מקוריות ופריטים יצירתיים יופיע כאן בקרוב. החנות בהקמה — כדאי לחזור ולבקר.",
+        "heroTitle": "אוספים אמנות",
+        "summary": "בקרוב יהיה אפשר לגלות ולבחור כאן יצירות אמנות מקוריות. העמוד עדיין בהקמה.",
         "sections": [],
         "panels": [],
-        "cardSummary": "יצירות אמנות מקוריות ופריטים יצירתיים שיוסיפו אופי וחמימות לבית שלכם. החנות תיפתח בקרוב.",
+        "cardSummary": "יצירות מקוריות וייחודיות שיכניסו צבע, אופי וחמימות לבית. העמוד ייפתח בקרוב.",
         "cardMeta": "בקרוב"
       }
     }

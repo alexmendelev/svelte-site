@@ -122,7 +122,11 @@ window.SITE_TRANSLATIONS = {
         "more": "Artwork list",
         "status": "Status",
         "available": "Available",
-        "sold": "SOLD"
+        "sold": "SOLD",
+        "technique": "Technique",
+        "catalogSummary": "Explore original artworks, from playful drawings to watercolor and fine-line compositions. Select any piece to see its details and collect it.",
+        "catalogCardSummary": "Explore and collect original artworks, including colorful characters, monochrome drawings, touches of gold, and watercolors.",
+        "catalogMeta": "Browse the collection"
       }
     },
     "ru": {
@@ -241,7 +245,11 @@ window.SITE_TRANSLATIONS = {
         "more": "Список работ",
         "status": "Статус",
         "available": "Доступна",
-        "sold": "ПРОДАНО"
+        "sold": "ПРОДАНО",
+        "technique": "Техника",
+        "catalogSummary": "Оригинальные работы: от графических рисунков до акварели и ярких композиций. Выберите работу, чтобы посмотреть подробности и добавить её в корзину.",
+        "catalogCardSummary": "Выбирайте авторские работы: цветная графика, чёрно-белые рисунки, золотые акценты и акварель.",
+        "catalogMeta": "Смотреть работы"
       }
     },
     "he": {
@@ -360,7 +368,11 @@ window.SITE_TRANSLATIONS = {
         "more": "רשימת יצירות",
         "status": "סטטוס",
         "available": "זמין",
-        "sold": "נמכר"
+        "sold": "נמכר",
+        "technique": "טכניקה",
+        "catalogSummary": "מבחר יצירות מקוריות, מרישומים מלאי אופי ועד צבעי מים ועבודות קוויות. בחרו יצירה לפרטים ולהוספה לסל.",
+        "catalogCardSummary": "גלו יצירות מקוריות: דמויות צבעוניות, רישומים בשחור-לבן, נגיעות זהב וצבעי מים.",
+        "catalogMeta": "לצפייה ביצירות"
       }
     }
   },

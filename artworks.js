@@ -1,5 +1,5 @@
 /* Exported from Catalog_WebP.xlsx. Set ARTWORKS_READY to true only after adding the matching images to assets/artworks/. */
-window.ARTWORKS_READY = false;
+window.ARTWORKS_READY = true;
 window.ARTWORKS = [
   {
     "id": "ART-001",

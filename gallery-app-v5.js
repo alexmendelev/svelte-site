@@ -871,7 +871,7 @@ const artworkInfo = (section, file) => {
     id: record.id || (pageKey + ":" + section.id + ":" + path),
     title: record.title || formatFileName(path),
     src: section.basePath + "/" + path,
-    size: record.size ? String(record.size).replace(/\\s*cm$/i, "") + " cm" : "",
+    size: record.size ? String(record.size).replace(/\s*cm$/i, "") + " cm" : "",
     price: typeof record.priceUSD === "number" ? "$" + record.priceUSD.toLocaleString("en-US") : (record.price || ""),
     technique: record.technique || record.description || "",
     description: record.description || "",

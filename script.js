@@ -1070,7 +1070,7 @@ const renderDetailPage = () => {
   }
 
   if (!page.sections.length) {
-    if (!page.panels.length) {
+    if (!page.panels.length && pageKey !== "shop") {
       sectionsRoot.append(
         createEmptyState(getStaticText("gallery.emptyPage", "This page is waiting for its next story."))
       );

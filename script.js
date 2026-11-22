@@ -119,13 +119,41 @@ const getLocalizedPage = (key = pageKey, lang = currentLanguage) => {
     return basePage;
   }
 
-  return {
+  const page = {
     ...basePage,
     ...translatedPage,
     panels: mergeLocalizedList(basePage.panels || [], translatedPage.panels),
     sections: mergeLocalizedList(basePage.sections || [], translatedPage.sections),
     heroArtwork: mergeLocalizedList(basePage.heroArtwork || [], translatedPage.heroArtwork)
   };
+
+  // The Collect Art storefront has its own catalog. Keep it unpublished
+  // until its WebP images are uploaded alongside ARTWORKS_READY = true.
+  if (key === "shop" && window.ARTWORKS_READY === true && Array.isArray(window.ARTWORKS)) {
+    const grouped = new Map();
+    window.ARTWORKS.filter((item) =>
+      item && item.display === true && typeof item.image === "string" && item.image.toLowerCase().endsWith(".webp")
+    ).forEach((item) => {
+      const category = item.category || "Other Art";
+      if (!grouped.has(category)) grouped.set(category, []);
+      grouped.get(category).push(item);
+    });
+    page.sections = Array.from(grouped, ([category, files], index) => ({
+      id: "category-" + (index + 1),
+      title: category,
+      note: "",
+      basePath: "assets/artworks",
+      files: files.map((item) => ({
+        id: item.id, path: item.image, title: item.title,
+        size: item.size, priceUSD: item.priceUSD,
+        technique: item.technique, status: item.status
+      }))
+    }));
+    page.summary = getStaticText("galleryShop.catalogSummary", "Explore original artwork available to collect.", lang);
+    page.cardSummary = getStaticText("galleryShop.catalogCardSummary", "Original artwork and one-of-a-kind pieces.", lang);
+    page.cardMeta = getStaticText("galleryShop.catalogMeta", "Browse artworks", lang);
+  }
+  return page;
 };
 
 const getPageNavLabel = (key, lang = currentLanguage) => {
@@ -840,11 +868,12 @@ const artworkInfo = (section, file) => {
   const record = typeof file === "object" && file !== null ? file : {};
   const status = String(record.status || "available").trim().toLowerCase();
   return {
-    id: pageKey + ":" + section.id + ":" + path,
+    id: record.id || (pageKey + ":" + section.id + ":" + path),
     title: record.title || formatFileName(path),
     src: section.basePath + "/" + path,
-    size: record.size || "",
-    price: record.price || "",
+    size: record.size ? String(record.size).replace(/\\s*cm$/i, "") + " cm" : "",
+    price: typeof record.priceUSD === "number" ? "$" + record.priceUSD.toLocaleString("en-US") : (record.price || ""),
+    technique: record.technique || record.description || "",
     description: record.description || "",
     status: status === "sold" ? "sold" : "available"
   };
@@ -868,7 +897,7 @@ const renderGalleryShop = (root, section) => {
     for (const [label, value] of [
       [galleryShopText("size", "Size"), item.size],
       [galleryShopText("price", "Price"), item.price],
-      [galleryShopText("description", "Description"), item.description],
+      [galleryShopText("technique", "Technique"), item.technique],
       [galleryShopText("status", "Status"), artworkStatusLabel(item.status)]
     ]) {
       const block = document.createElement("div");
@@ -1124,7 +1153,7 @@ const renderCart = () => {
     name.textContent = item.title;
     detail.append(name);
     const values = document.createElement("span");
-    values.textContent = [item.size, item.price, item.description, item.status ? artworkStatusLabel(item.status) : ""].filter(Boolean).join(", ");
+    values.textContent = [item.size, item.price, item.technique || item.description, item.status ? artworkStatusLabel(item.status) : ""].filter(Boolean).join(", ");
     detail.append(values);
     row.append(detail);
     const remove = document.createElement("button");
@@ -1152,7 +1181,7 @@ window.SVETA_CART = {
   addItem: (item) => {
     if (!item || typeof item.id !== "string" || typeof item.title !== "string") return false;
     const items = readCart();
-    if (!items.some((entry) => entry.id === item.id)) items.push({id: item.id, title: item.title, src: item.src, size: item.size, price: item.price, description: item.description, status: item.status});
+    if (!items.some((entry) => entry.id === item.id)) items.push({id: item.id, title: item.title, src: item.src, size: item.size, price: item.price, description: item.description, technique: item.technique, status: item.status});
     saveCart(items);
     renderCart();
     return true;

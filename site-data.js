@@ -1,7 +1,6 @@
 window.SITE_DATA = {
   "pageOrder": [
     "shop",
-    "original-art",
     "master-classes",
     "my-journey",
     "contact-me"

@@ -91,14 +91,14 @@ window.ARTWORKS = [
   },
   {
     "id": "ART-009",
-    "title": "Hamsa 2",
-    "category": "Monochrome Magic",
-    "size": "21 x 14.8",
-    "priceUSD": 100,
-    "technique": "Fineliner on black paper",
-    "image": "Hamsa2_b.webp",
+    "title": "The Earth And The Sky",
+    "category": "Watercolor Fantasy",
+    "size": "29.7 x 21",
+    "priceUSD": 250,
+    "technique": "Watercolor and fineliner on paper",
+    "image": "TheEarthAndTheSky.webp",
     "status": "available",
-    "display": false
+    "display": true
   },
   {
     "id": "ART-010",
@@ -296,7 +296,7 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "PinkCat.webp",
     "status": "available",
-    "display": false
+    "display": true
   },
   {
     "id": "ART-028",
@@ -339,6 +339,39 @@ window.ARTWORKS = [
     "priceUSD": 300,
     "technique": "Watercolor and fineliner on paper",
     "image": "TwilightTime.webp",
+    "status": "available",
+    "display": true
+  },
+  {
+    "id": "ART-032",
+    "title": "Vertigo",
+    "category": "Watercolor Fantasy",
+    "size": "29.7 x 21",
+    "priceUSD": 200,
+    "technique": "Watercolor and fineliner on paper",
+    "image": "Vertigo.webp",
+    "status": "available",
+    "display": true
+  },
+  {
+    "id": "ART-033",
+    "title": "Two Women",
+    "category": "Watercolor Fantasy",
+    "size": "29.7 x 21",
+    "priceUSD": 300,
+    "technique": "Watercolor and fineliner on paper",
+    "image": "TwoWomen.webp",
+    "status": "available",
+    "display": true
+  },
+  {
+    "id": "ART-034",
+    "title": "Sad Fish",
+    "category": "Watercolor Fantasy",
+    "size": "29.7 x 21",
+    "priceUSD": 150,
+    "technique": "Watercolor and fineliner on paper",
+    "image": "SadFish.webp",
     "status": "available",
     "display": true
   }

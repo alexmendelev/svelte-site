@@ -10,7 +10,8 @@ window.ARTWORKS = [
     "technique": "Original mixed-media collage on paper",
     "image": "NightThoughts.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-002",
@@ -21,7 +22,8 @@ window.ARTWORKS = [
     "technique": "Hand-embellished monoprint",
     "image": "LasyAfternoon_p.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-003",
@@ -32,7 +34,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "TheWolf.webp",
     "status": "sold",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-004",
@@ -43,7 +46,8 @@ window.ARTWORKS = [
     "technique": "Fineliner, ink, and gold accents on paper",
     "image": "ACityInside.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-005",
@@ -54,7 +58,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "BlackBeauty.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-006",
@@ -65,7 +70,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "WiseOwl.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-007",
@@ -76,7 +82,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on black paper",
     "image": "TheFish_b.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-008",
@@ -87,7 +94,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "Hamsa1.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-009",
@@ -98,7 +106,8 @@ window.ARTWORKS = [
     "technique": "Watercolor and fineliner on paper",
     "image": "TheEarthAndTheSky.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-010",
@@ -109,7 +118,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "InternalJunction.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-011",
@@ -120,7 +130,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "ThreeBirds.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "АРТ-012",
@@ -131,7 +142,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "ThreeFish.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-013",
@@ -142,7 +154,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "Basketware1.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-014",
@@ -153,7 +166,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "Basketware2_g.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-015",
@@ -164,7 +178,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on grey paper",
     "image": "SmoothFlow_g.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-016",
@@ -175,7 +190,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "AfricanMotive.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-017",
@@ -186,7 +202,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "MeAndMyCat.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-018",
@@ -197,7 +214,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "GeometryOfThoughts.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-019",
@@ -208,7 +226,8 @@ window.ARTWORKS = [
     "technique": "Fineliner, ink, and gold accents on paper",
     "image": "PierrotWithTwoCats.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-020",
@@ -219,7 +238,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on paper",
     "image": "MyDearHedgehog.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-021",
@@ -230,7 +250,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "LookingInward.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-022",
@@ -241,7 +262,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "Moods.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-023",
@@ -252,7 +274,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "UkrainianCat.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-024",
@@ -263,7 +286,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "TwoDogs.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-025",
@@ -274,7 +298,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "TwoCats.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-026",
@@ -285,7 +310,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "ExoticBird.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-027",
@@ -296,7 +322,8 @@ window.ARTWORKS = [
     "technique": "Fineliner and color pencils on paper",
     "image": "PinkCat.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-028",
@@ -307,7 +334,8 @@ window.ARTWORKS = [
     "technique": "Acrylic and fineliner on paper",
     "image": "TeddyBear1.webp",
     "status": "available",
-    "display": false
+    "display": false,
+    "caption": ""
   },
   {
     "id": "ART-029",
@@ -318,7 +346,8 @@ window.ARTWORKS = [
     "technique": "Fineliner on black paper",
     "image": "Dandelions_b.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-030",
@@ -329,7 +358,8 @@ window.ARTWORKS = [
     "technique": "Watercolor and fineliner on paper",
     "image": "SunnyDay.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-031",
@@ -340,7 +370,8 @@ window.ARTWORKS = [
     "technique": "Watercolor and fineliner on paper",
     "image": "TwilightTime.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-032",
@@ -351,7 +382,8 @@ window.ARTWORKS = [
     "technique": "Watercolor and fineliner on paper",
     "image": "Vertigo.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-033",
@@ -362,7 +394,8 @@ window.ARTWORKS = [
     "technique": "Watercolor and fineliner on paper",
     "image": "TwoWomen.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   },
   {
     "id": "ART-034",
@@ -373,6 +406,7 @@ window.ARTWORKS = [
     "technique": "Watercolor and fineliner on paper",
     "image": "SadFish.webp",
     "status": "available",
-    "display": true
+    "display": true,
+    "caption": ""
   }
 ];

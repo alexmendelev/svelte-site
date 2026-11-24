@@ -146,7 +146,7 @@ const getLocalizedPage = (key = pageKey, lang = currentLanguage) => {
       files: files.map((item) => ({
         id: item.id, path: item.image, title: item.title,
         size: item.size, priceUSD: item.priceUSD,
-        technique: item.technique, status: item.status
+        technique: item.technique, caption: item.caption, status: item.status
       }))
     }));
     page.summary = getStaticText("galleryShop.catalogSummary", "Explore original artwork available to collect.", lang);
@@ -875,12 +875,15 @@ const artworkInfo = (section, file) => {
     price: typeof record.priceUSD === "number" ? "$" + record.priceUSD.toLocaleString("en-US") : (record.price || ""),
     technique: record.technique || record.description || "",
     description: record.description || "",
+    caption: typeof record.caption === "string" ? record.caption.trim() : "",
     status: status === "sold" ? "sold" : "available"
   };
 };
 const artworkStatusLabel = (status) =>
   galleryShopText(status === "sold" ? "sold" : "available", status === "sold" ? "SOLD" : "Available");
 const renderGalleryShop = (root, section) => {
+  const imagesOnly = pageKey === "master-classes";
+  if (imagesOnly) root.classList.add("gallery-shop--images-only");
   const items = section.files.map((file) => artworkInfo(section, file));
   const rows = [];
   const list = document.createElement("div");
@@ -893,6 +896,13 @@ const renderGalleryShop = (root, section) => {
     const heading = document.createElement("h3");
     heading.textContent = item.title;
     details.append(heading);
+
+    if (item.caption) {
+      const caption = document.createElement("p");
+      caption.className = "artwork-caption";
+      caption.textContent = item.caption;
+      details.append(caption);
+    }
 
     for (const [label, value] of [
       [galleryShopText("size", "Size"), item.size],
@@ -940,7 +950,7 @@ const renderGalleryShop = (root, section) => {
       button.tabIndex = selected ? 0 : -1;
       // Keep the active details in the DOM while they remain selected.
       // Rebuilding a focused Collect button steals keyboard focus.
-      if (selected && detail.hidden) {
+      if (selected && detail.hidden && !imagesOnly) {
         detail.replaceChildren(makeDetails(items[i]));
         detail.hidden = false;
       } else if (!selected && !detail.hidden) {
@@ -968,9 +978,12 @@ const renderGalleryShop = (root, section) => {
     const label = document.createElement("strong");
     label.textContent = item.title + ", " + artworkStatusLabel(item.status);
     copy.append(label);
+    if (imagesOnly) copy.hidden = true;
 
     selectButton.append(imageHolder, copy);
     selectButton.addEventListener("click", () => selectArtwork(i));
+
+    if (imagesOnly) selectButton.setAttribute("aria-label", item.title);
 
     const detail = document.createElement("div");
     detail.className = "artwork-row__detail";
